@@ -32,7 +32,8 @@
             "Apellido2": "",
             "Dirrecion": "",
             "Acudiente": "",
-            "Telefonos": "",
+            "Celular": "",
+            "FIjo": "",
             "Estado": "",
             "Riesgo":""
         }
