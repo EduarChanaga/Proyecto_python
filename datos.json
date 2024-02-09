@@ -1,0 +1,57 @@
+{
+    "Campus": {
+      "Cordinador": [
+        {
+
+        }
+       
+      ],
+
+
+
+
+      "Trainers": [
+        {
+
+        }
+      ],
+
+
+
+
+
+
+
+      "Inscritos": [
+        {
+            "Id": 1,
+            "n_identificacion":"",
+            "Nombre1": "",
+            "Nombre2":"",
+            "Apellido1": "",
+            "Apellido2": "",
+            "Dirrecion": "",
+            "Acudiente": "",
+            "Telefonos": "",
+            "Estado": "",
+            "Riesgo":""
+        }
+      ],
+      "Ruta_NodeJs": [
+        {
+          "id": 1
+
+        }
+      ],
+      "Ruta_Java": [
+        {
+          "id": 1
+        }
+      ],
+      "Ruta_NetCore": [
+        {
+          "id": 1
+        }
+      ]
+    }
+  }
