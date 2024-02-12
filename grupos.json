@@ -1,0 +1,16 @@
+{
+  "grupos": {
+    "kenia": [
+      {
+        "n_identificacion": 12321,
+        "Nombre": "12321 213 123 123",
+        "Direccion": "213",
+        "Acudiente": "123",
+        "Celular": "123",
+        "FIjo": "123",
+        "Estado": "Aprobado",
+        "grupo": "kenia"
+      }
+    ]
+  }
+}

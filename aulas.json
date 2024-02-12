@@ -1,44 +1,9 @@
-
 {
-    
-    "aulas":{
-        
-      "nodeJS 1": [
-  
-      ],
-      "nodeJS 2": [
-  
-      ],
-      "nodeJS 3": [
-  
-      ],
-      "nodeJS 4": [
-  
-      ],
-      "Java 1": [
-  
-      ],
-      "Java 2": [
-  
-      ],
-      "Java 3": [
-  
-      ],
-      "Java 4": [
-  
-      ],
-      "NetCore 1":[
+  "aulas": {
+    "Sputnik": [
 
-      ],
-      "NetCore 2":[
-
-      ],
-      "NetCore 3":[
-
-      ],
-
-      "NetCore 4":[
-
-      ]
-    }
+    ],
+    "Apolo": [],
+    "Artemis": []
   }
+}
