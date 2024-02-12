@@ -10,7 +10,7 @@ def campers():
     while True:
         with open('proceso_de_inscripcion.json', 'r') as proceso_file:
             proceso_de_inscripcion = json.load(proceso_file)  # Cargar contenido del archivo JSON a una variable
-
+        clear()
         print(" - Proceso de ingreso - ")
         print("")
         print("Desea realizar el pree registro a campus? (Si / No)")

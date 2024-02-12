@@ -1,6 +1,14 @@
 import Campers
 import trainers
+import cordinador
+import os
+def clear():
+    if os.name == 'nt':
+        os.system('cls')        # Funcion para limpiar la terminal
+    else:
+        os.system('clear')
 while True:
+    clear()
     print("-----------------------")
     print("       Campuslands     ")
     print(" seguimiento academico ")
@@ -12,8 +20,12 @@ while True:
 
     if tipo_de_usuario==1:
         Campers.campers()
+
     if tipo_de_usuario==2:
         trainers.trainers()
+
+    if tipo_de_usuario==3:
+        cordinador.cordinador()
         
 
 
