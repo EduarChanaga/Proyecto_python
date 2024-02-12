@@ -1,17 +1,18 @@
 {
-  "Campus": {
-    "Cordinador": [
-      {}
-    ],
-    "Trainers": [
-      {}
-    ],
+  "inscripcion": {
     "Inscritos": [],
     "aprobados": [
- 
+      {
+        "Id": 1,
+        "n_identificacion": 109551647,
+        "Nombre": "Eduar Damian Chanaga Gonzalez",
+        "Direccion": "crr 11 57 an 22",
+        "Acudiente": "rubiela",
+        "Celular": "313 3950318",
+        "FIjo": "313131313",
+        "Estado": "Aprobado"
+      }
     ],
-    "reprobados": [
-  
-    ]
+    "reprobados": []
   }
 }

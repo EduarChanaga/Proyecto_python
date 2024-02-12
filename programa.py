@@ -7,13 +7,17 @@
 import json
 
 # Abrir el archivo JSON
-with open('datos.json', 'r') as Lospedidos:
+with open('datos.json', 'r') as datos:
     # Cargar el contenido del archivo en un diccionario
-    diccionario = json.load(Lospedidos)
+    inscrip = json.load(datos)
+
+with open('datos.json', 'r') as aulas:
+    # Cargar el contenido del archivo en un diccionario
+    aulas = json.load(aulas)
 while True:
-    inscritos = diccionario["Campus"]["Inscritos"]
-    aprobados = diccionario["Campus"]["aprobados"]
-    reprobados=diccionario["Campus"]["reprobados"]
+    inscritos = inscrip["inscripcion"]["Inscritos"]
+    aprobados = inscrip["inscripcion"]["aprobados"]
+    reprobados=inscrip["inscripcion"]["reprobados"]
     print("###############")
     print("# Campuslands #")
     print("# Bienvenido! #")
@@ -33,7 +37,7 @@ while True:
         while Decision2!=3:
             print("Que desea realizar?")
             print("1. Inscripcion")
-            print("2. Ver datos")
+            print("2. Ver datos de campers")
             print("3. salir")
             Decision2=int(input("--> "))
             print("--------------------")
@@ -41,7 +45,7 @@ while True:
             
             if Decision2==1:
                 # Obtener el próximo ID disponible
-                next_id = len(diccionario["Campus"]["Inscritos"]) + 1
+                next_id = len(inscrip["inscripcion"]["Inscritos"]) + 1
                 identificacion_inscripcion=int(input("N° de identificacion: "))
                 nombre1_inscrito=str(input("Primer nombre: "))
                 nombre2_inscrito=str(input("Segundo nombre: "))
@@ -64,15 +68,32 @@ while True:
                 }
 
                 # Agregar el nuevo dato a la lista de inscritos
-                diccionario["Campus"]["Inscritos"].append(nuevo_dato)
+                inscrip["inscripcion"]["Inscritos"].append(nuevo_dato)
 
                 # Escribir el JSON actualizado de vuelta al archivo
                 with open('datos.json', 'w') as file:
-                    json.dump(diccionario, file, indent=2)
+                    json.dump(inscrip, file, indent=2)
+
+
+
+
+
+
+
+
 
         ######################### Trainers #########################
     if Decision1==2:
         print("")
+
+
+
+
+
+
+
+
+
 
         ######################### Coordinador #########################
     if Decision1==3:
@@ -116,9 +137,10 @@ while True:
 
                         # Escribir el JSON actualizado de vuelta al archivo
                     with open('datos.json', 'w') as file:
-                        json.dump(diccionario, file, indent=2)
+                        json.dump(inscrip, file, indent=2)
             else:
                 print("contraseña incorrecta")
+
 ## Desarrollado por: 
 ##Eduar Damian Chanaga Gonzalez - 1095581647
 ##Andres Pedraza Peña - 1005331114
