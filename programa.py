@@ -11,9 +11,9 @@ with open('datos.json', 'r') as datos:
     # Cargar el contenido del archivo en un diccionario
     inscrip = json.load(datos)
 
-with open('datos.json', 'r') as aulas:
+with open('aulas.json', 'r') as aulas:
     # Cargar el contenido del archivo en un diccionario
-    aulas = json.load(aulas)
+    aulass = json.load(aulas)
 while True:
     inscritos = inscrip["inscripcion"]["Inscritos"]
     aprobados = inscrip["inscripcion"]["aprobados"]
