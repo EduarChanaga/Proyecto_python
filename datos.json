@@ -4,107 +4,114 @@
       {
         "Id": "a7b907de-3e39-4ef7-8d95-40d07243b9d1",
         "n_identificacion": 2098546132,
-        "Nombre": "Mar\u00c3\u00ada Fernanda L\u00c3\u00b3pez Garc\u00c3\u00ada",
+        "Nombre": "María Fernanda López García",
         "Direccion": "Calle 34 #45-67",
-        "Acudiente": "Carlos L\u00c3\u00b3pez",
+        "Acudiente": "Carlos López",
         "Celular": "3157896543",
         "FIjo": "none",
         "Estado": "Inscrito"
-      },
-      {
+        },
+        
+        {
         "Id": "b8c5f6a3-d28e-4c5c-bc1c-729a394890a2",
         "n_identificacion": 3057894125,
-        "Nombre": "Luis Alberto Ram\u00c3\u00adrez S\u00c3\u00a1nchez",
+        "Nombre": "Luis Alberto Ramírez Sánchez",
         "Direccion": "Av. Principal #123",
-        "Acudiente": "Mar\u00c3\u00ada S\u00c3\u00a1nchez",
+        "Acudiente": "María Sánchez",
         "Celular": "3009876543",
         "FIjo": "none",
         "Estado": "Inscrito"
-      },
-      {
+        },
+        
+        {
         "Id": "c6d4e2f9-7b53-4aef-985c-432e675809d8",
         "n_identificacion": 4098765432,
-        "Nombre": "Laura Melissa P\u00c3\u00a9rez Rodr\u00c3\u00adguez",
+        "Nombre": "Laura Melissa Pérez Rodríguez",
         "Direccion": "Cra. 10 #20-30",
-        "Acudiente": "Pedro P\u00c3\u00a9rez",
+        "Acudiente": "Pedro Pérez",
         "Celular": "3112345678",
         "FIjo": "none",
         "Estado": "Inscrito"
-      },
-      {
+        },
+        
+        {
         "Id": "d5e3a4c7-f6b2-4d98-a1e0-854c896de2b3",
         "n_identificacion": 5078963214,
-        "Nombre": "Juan Manuel G\u00c3\u00b3mez",
+        "Nombre": "Juan Manuel Gómez",
         "Direccion": "Calle 25 #15-25",
-        "Acudiente": "Ana G\u00c3\u00b3mez",
+        "Acudiente": "Ana Gómez",
         "Celular": "3176543210",
         "FIjo": "none",
         "Estado": "Inscrito"
-      },
-      {
+        },
+        
+        {
         "Id": "e4f2b3d1-c5a6-4b9e-801d-943f8e6c7b5e",
         "n_identificacion": 6098741235,
-        "Nombre": "Sandra Marcela Mart\u00c3\u00adnez",
+        "Nombre": "Sandra Marcela Martínez",
         "Direccion": "Cra. 5 #6-7",
-        "Acudiente": "Jorge Mart\u00c3\u00adnez",
+        "Acudiente": "Jorge Martínez",
         "Celular": "3145678901",
         "FIjo": "none",
         "Estado": "Inscrito"
-      },
-      {
+        },
+        
+        {
         "Id": "f3g2h1i0-j9k8-5l4m-6n7o-8p9q",
         "n_identificacion": 7089654123,
-        "Nombre": "Andr\u00c3\u00a9s Felipe Gonz\u00c3\u00a1lez",
+        "Nombre": "Andrés Felipe González",
         "Direccion": "Cra. 30 #40-50",
-        "Acudiente": "Marta Gonz\u00c3\u00a1lez",
+        "Acudiente": "Marta González",
         "Celular": "3108765432",
         "FIjo": "none",
         "Estado": "Inscrito"
-      },
-      {
+        },
+        
+        {
+        "Id": "g4h3j2k1l0-q9w8e7r6t5y",
+        "n_identificacion": 8097531264,
+        "Nombre": "Camila Andrea Sánchez",
+        "Direccion": "Av. 20 #15-10",
+        "Acudiente": "David Sánchez",
+        "Celular": "3012345678",
+        "FIjo": "none",
+        "Estado": "Inscrito"
+        },
+        
+        {
+        "Id": "m3n2b1v0-q9w8e7r6t5y",
+        "n_identificacion": 9067418523,
+        "Nombre": "Roberto Carlos López",
+        "Direccion": "Cra. 15 #25-30",
+        "Acudiente": "Ana María López",
+        "Celular": "3198765432",
+        "FIjo": "none",
+        "Estado": "Inscrito"
+        },
+        
+        {
+        "Id": "x3z2c1v0-q9w8e7r6t5y",
+        "n_identificacion": 1056874123,
+        "Nombre": "Ana Sofía Ramírez",
+        "Direccion": "Calle 40 #35-45",
+        "Acudiente": "Carlos Ramírez",
+        "Celular": "3187654321",
+        "FIjo": "none",
+        "Estado": "Inscrito"
+        },
+        
+        {
         "Id": "a9b8c7d6-e5f4-4g3h2i1j0",
         "n_identificacion": 1105986342,
-        "Nombre": "Jos\u00c3\u00a9 Daniel Mart\u00c3\u00adn",
+        "Nombre": "José Daniel Martín",
         "Direccion": "Cra. 8 #7-6",
-        "Acudiente": "Martha Mart\u00c3\u00adn",
+        "Acudiente": "Martha Martín",
         "Celular": "3123456789",
         "FIjo": "none",
         "Estado": "Inscrito"
-      }
+        }
     ],
-    "aprobados": [
-      {
-        "Id": "m3n2b1v0-q9w8e7r6t5y",
-        "n_identificacion": 9067418523,
-        "Nombre": "Roberto Carlos L\u00c3\u00b3pez",
-        "Direccion": "Cra. 15 #25-30",
-        "Acudiente": "Ana Mar\u00c3\u00ada L\u00c3\u00b3pez",
-        "Celular": "3198765432",
-        "FIjo": "none",
-        "Estado": "Aprobado"
-      }
-    ],
-    "reprobados": [
-      {
-        "Id": "x3z2c1v0-q9w8e7r6t5y",
-        "n_identificacion": 1056874123,
-        "Nombre": "Ana Sof\u00c3\u00ada Ram\u00c3\u00adrez",
-        "Direccion": "Calle 40 #35-45",
-        "Acudiente": "Carlos Ram\u00c3\u00adrez",
-        "Celular": "3187654321",
-        "FIjo": "none",
-        "Estado": "Reprobado"
-      },
-      {
-        "Id": "g4h3j2k1l0-q9w8e7r6t5y",
-        "n_identificacion": 8097531264,
-        "Nombre": "Camila Andrea S\u00c3\u00a1nchez",
-        "Direccion": "Av. 20 #15-10",
-        "Acudiente": "David S\u00c3\u00a1nchez",
-        "Celular": "3012345678",
-        "FIjo": "none",
-        "Estado": "Reprobado"
-      }
-    ]
+    "aprobados": [],
+    "reprobados": []
   }
 }
