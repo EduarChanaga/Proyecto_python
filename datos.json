@@ -1,58 +1,33 @@
 {
-    "Campus": {
-      "Cordinador": [
-        {
-
-        }
-       
-      ],
-
-
-
-
-      "Trainers": [
-        {
-
-        }
-      ],
-
-
-
-
-
-
-
-      "Inscritos": [
-        {
-            "Id": 1,
-            "n_identificacion":"",
-            "Nombre1": "",
-            "Nombre2":"",
-            "Apellido1": "",
-            "Apellido2": "",
-            "Dirrecion": "",
-            "Acudiente": "",
-            "Celular": "",
-            "FIjo": "",
-            "Estado": "",
-            "Riesgo":""
-        }
-      ],
-      "Ruta_NodeJs": [
-        {
-          "id": 1
-
-        }
-      ],
-      "Ruta_Java": [
-        {
-          "id": 1
-        }
-      ],
-      "Ruta_NetCore": [
-        {
-          "id": 1
-        }
-      ]
-    }
+  "Campus": {
+    "Cordinador": [
+      {}
+    ],
+    "Trainers": [
+      {}
+    ],
+    "Inscritos": [
+      {
+        "Id": 1,
+        "n_identificacion": 123,
+        "Nombre": "123 123 123 123",
+        "Direccion": "123",
+        "Acudiente": "123",
+        "Celular": "123",
+        "FIjo": "123",
+        "Estado": "Inscrito"
+      },
+      {
+        "Id": 2,
+        "n_identificacion": 123,
+        "Nombre": "123 1234 1234 1234",
+        "Direccion": "1234",
+        "Acudiente": "1234",
+        "Celular": "1234",
+        "FIjo": "1234",
+        "Estado": "Inscrito"
+      }
+    ],
+    "aprobados": []
   }
+}
