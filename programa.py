@@ -127,6 +127,8 @@ while True:
                             if calificacion_inscrito >= 60:
                                 inscrito["Estado"] = "Aprobado"
                                     # Mover al estudiante de la lista de inscritos a la lista de aprobados
+                                    # Generar una nueva ID única para el estudiante aprobado
+                                nueva_id = str(uuid.uuid4())            
                                 aprobados.append(inscrito)
                                 inscritos.remove(inscrito)
                             else:
