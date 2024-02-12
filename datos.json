@@ -1,27 +1,6 @@
 {
   "inscripcion": {
-    "Inscritos": [
-      {
-        "n_identificacion": 1095581646,
-        "Nombre": "eduar damian chanagag gonzalez",
-        "Direccion": "crr 11",
-        "Acudiente": "rubiela",
-        "Celular": "313 3950318",
-        "FIjo": "45424",
-        "Estado": "Inscrito",
-        "grupo": ""
-      },
-      {
-        "n_identificacion": 10122,
-        "Nombre": "kenia 123 123 213",
-        "Direccion": "213",
-        "Acudiente": "123",
-        "Celular": "123",
-        "FIjo": "213",
-        "Estado": "Inscrito",
-        "grupo": ""
-      }
-    ],
+    "Inscritos": [],
     "aprobados": [],
     "reprobados": []
   }
