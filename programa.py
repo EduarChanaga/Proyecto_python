@@ -18,15 +18,14 @@ while True:
     inscritos = inscrip["inscripcion"]["Inscritos"]
     aprobados = inscrip["inscripcion"]["aprobados"]
     reprobados=inscrip["inscripcion"]["reprobados"]
-    print("###############")
-    print("# Campuslands #")
-    print("# Bienvenido! #")
-    print("###############")
-    print("--------------------")
+    print("##############################")
+    print("# Bienvenido a Campuslands   #")
+    print("#  (Centro de formacion)     #")
+    print("##############################")
+    print("----------------------------------------")
     print("Que tipo de usuario desea ingresar?")
-    print("1. Camper")
-    print("2. Trainer")
-    print("3. Cordinador")
+    print("1. Camper\t2. Trainer\t3. Cordinador")
+
     Decision1=int(input("--> "))
     print("--------------------")
 
