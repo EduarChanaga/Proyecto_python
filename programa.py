@@ -5,7 +5,7 @@
 # ********************************************
 
 import json
-
+import uuid
 # Abrir el archivo JSON
 with open('datos.json', 'r') as datos:
     # Cargar el contenido del archivo en un diccionario
@@ -45,7 +45,6 @@ while True:
             
             if Decision2==1:
                 # Obtener el próximo ID disponible
-                next_id = len(inscrip["inscripcion"]["Inscritos"]) + 1
                 identificacion_inscripcion=int(input("N° de identificacion: "))
                 nombre1_inscrito=str(input("Primer nombre: "))
                 nombre2_inscrito=str(input("Segundo nombre: "))
@@ -57,7 +56,7 @@ while True:
                 fijo_inscrito=str(input("Numero fijo: "))
                 # Nuevo dato a agregar con el próximo ID disponible
                 nuevo_dato = {
-                    "Id": next_id,
+                    "Id": str(uuid.uuid4()),
                     "n_identificacion": identificacion_inscripcion,
                     "Nombre": nombre1_inscrito+" "+nombre2_inscrito+" "+apellido1_inscrito+" "+apellido2_inscrito,
                     "Direccion": direccion_inscrito,
@@ -115,20 +114,20 @@ while True:
                 if decision2==1: 
                     inscritos_ordenados = sorted(inscritos, key=lambda x: x["Id"])
                     for inscrito in inscritos_ordenados:
-                        print("ID:", inscrito["Id"], "  N° Identificación:", inscrito["n_identificacion"], "  Nombre:", inscrito["Nombre"] )
+                        print("  N° Identificación:", inscrito["n_identificacion"], "  Nombre:", inscrito["Nombre"] )
                     print("-----")
-                    id_nota_inscrito=int(input("ID del estudiante a ingresar notas: "))
+                    identificacion_nota_inscrito=int(input("N° de identificacion del estudiante a ingresar notas: "))
                     nota_teorica_inscrito=float(input("Nota teorica: "))
                     nota_practica_inscrito=float(input("Nota practica: "))
                     calificacion_inscrito=(nota_practica_inscrito+nota_teorica_inscrito)/2
                     for inscrito in inscritos:
-                        if inscrito["Id"] == id_nota_inscrito:
+                        if inscrito["n-identificacion"] == identificacion_nota_inscrito:
                             # Actualizar el estado del inscrito si la calificación es mayor o igual a 60
                             if calificacion_inscrito >= 60:
                                 inscrito["Estado"] = "Aprobado"
                                     # Mover al estudiante de la lista de inscritos a la lista de aprobados
                                     # Generar una nueva ID única para el estudiante aprobado
-                                nueva_id = str(uuid.uuid4())            
+                                    
                                 aprobados.append(inscrito)
                                 inscritos.remove(inscrito)
                             else:
