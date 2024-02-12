@@ -1,0 +1,19 @@
+import Campers
+import trainers
+while True:
+    print("-----------------------")
+    print("       Campuslands     ")
+    print(" seguimiento academico ")
+    print("-----------------------")
+    print("                       ")
+    print("  ¿Que tipo de usuario desea ingresar?  ")
+    print("1. Camper / 2. Trainer / 3. Coordinacion")
+    tipo_de_usuario=int(input("--> "))   #Elegir a que parte del menu desea moverse
+
+    if tipo_de_usuario==1:
+        Campers.campers()
+    if tipo_de_usuario==2:
+        trainers.trainers()
+        
+
+
