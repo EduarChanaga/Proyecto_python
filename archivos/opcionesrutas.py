@@ -15,7 +15,6 @@ def crear_grupo():
             grupos = json.load(o)
         with open('trainers.json', 'r') as u:
             trainers = json.load(u) # Cargar contenido del archivo JSON a una variable
-        clear()
         
         
         print(" - Proceso de creacion de grupos - ")
@@ -30,15 +29,17 @@ def crear_grupo():
         # Ingreso de datos del entrenador
         grupo_nombre = input("Nombre del grupo: ")
         grupo_horario = int(input("1. (6:00)\n2. (10:00)\n3. (14:00)\n4. (18:00)\n-> "))
-        
+        #definir aula del salon
+        print("1. Apolo")
+        print("2. Artemis")
+        print("3. Sputnik")
+        grupo_salon=int(input("Ingrese N° de salon: "))
         # Mostrar la lista de entrenadores con su ID y nombre
         for trainer in trainers["campers"]["trainers"]:
             print("ID:", trainer["n_identificacion"])
             print("Nombre:", trainer["Nombre"])
-          
-          
-          
-          
+
+######################################################################################################################################
         #Agregar entrenador a nuevo grupo
         while True:
             grupo = input("Ingresa la ID del entrenador que deseas seleccionar: ")
@@ -58,13 +59,19 @@ def crear_grupo():
                 break
             else:
                 print("La ID del entrenador ingresada no existe. Intenta de nuevo.")
-                
-                
-        #definir aula del salon
-        print("1. Apolo")
-        print("2. Artemis")
-        print("3. Sputnik")
-        grupo_salon=int(input("Ingrese N° de salon: "))
+
+        # Verificar si el entrenador ya está asignado a otro grupo en el mismo horario
+        entrenador_existente = False
+        for grupo in info_grupos["campus"]["grupo"]:
+            if grupo["Horario"] == grupo_horario and grupo.get("trainer") and grupo["trainer"]["ID"] == grupo_trainer["ID"]:
+                entrenador_existente = True
+                break
+
+        if entrenador_existente:
+            print("El entrenador ya está asignado a otro grupo en el mismo horario. Selecciona otro horario o entrenador.")
+            continue
+
+######################################################################################################################################
         
         
         #definir ruta del salon
@@ -99,4 +106,4 @@ def crear_grupo():
         with open('info_grupos.json', 'w') as file:
             json.dump(info_grupos, file, indent=2)  # Guardar cambios
 
-        print(" ingreso trainer exitoso! ")
+        print("Creacion de grupo exitosa! ")
