@@ -1,46 +1,6 @@
 {
   "campus": {
     "grupo": [
-      {
-        "nombre_grupo": "p1",
-        "Horario": 1,
-        "trainer": {
-          "ID": "1095581647",
-          "Nombre": "Pedrito perez"
-        },
-        "Salon": 1,
-        "Ruta": 1
-      },
-      {
-        "nombre_grupo": "p2",
-        "Horario": 2,
-        "trainer": {
-          "ID": "1095581647",
-          "Nombre": "Pedrito perez"
-        },
-        "Salon": 1,
-        "Ruta": 1
-      },
-      {
-        "nombre_grupo": "93",
-        "Horario": 1,
-        "trainer": {
-          "ID": "109558123647",
-          "Nombre": "Alfredo "
-        },
-        "Salon": 1,
-        "Ruta": 3
-      },
-      {
-        "nombre_grupo": "p4",
-        "Horario": 3,
-        "trainer": {
-          "ID": "2348237486343",
-          "Nombre": "pedro daza"
-        },
-        "Salon": 1,
-        "Ruta": 2
-      }
     ]
   }
 }

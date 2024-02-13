@@ -29,15 +29,13 @@ def crear_grupo():
         # Ingreso de datos del entrenador
         grupo_nombre = input("Nombre del grupo: ")
         grupo_horario = int(input("1. (6:00)\n2. (10:00)\n3. (14:00)\n4. (18:00)\n-> "))
-        #definir aula del salon
-        print("1. Apolo")
-        print("2. Artemis")
-        print("3. Sputnik")
-        grupo_salon=int(input("Ingrese N° de salon: "))
+        
         # Mostrar la lista de entrenadores con su ID y nombre
         for trainer in trainers["campers"]["trainers"]:
             print("ID:", trainer["n_identificacion"])
             print("Nombre:", trainer["Nombre"])
+            print("")
+            print("")
 
 ######################################################################################################################################
         #Agregar entrenador a nuevo grupo
@@ -71,6 +69,29 @@ def crear_grupo():
             print("El entrenador ya está asignado a otro grupo en el mismo horario. Selecciona otro horario o entrenador.")
             continue
 
+
+
+
+
+
+
+
+######################################################################################################################################
+        #definir aula del salon
+        print("1. Apolo")
+        print("2. Artemis")
+        print("3. Sputnik")
+        grupo_salon=int(input("Ingrese N° de salon: "))
+        #verificar si el grupo ya existe con el mismo horario
+        grupo_existente=False
+        for grupo in info_grupos["campus"]["grupo"]:
+            if grupo["Horario"]==grupo_horario and grupo.get("Salon")==grupo_salon:
+                grupo_existente=True
+                break
+        if grupo_existente:
+            print("El grupo ya existe con el mismo salon y horario. Selecciona otro salon u otro horario")
+            print("")
+            continue
 ######################################################################################################################################
         
         

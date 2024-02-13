@@ -41,16 +41,23 @@ def inscripcion():
         json.dump(datos, file, indent=2)
     with open('inscritos.json', 'w') as file:
         json.dump({"campers": {"campers_inscritos": inscritos}}, file, indent=2)
-    
-
-
+#########################################################################################################################################################################
 
 def matriculas():
-    print("")
+    with open("aprobados.json","r") as file:
+        aprobados=json.load(file)
+    with open("grupos.json","r") as file:
+        grupos=json.load(file)
+    aprobados=aprobados["campers"]["campers_aprobados"]
+    for i in aprobados:
+        print("ID:", i["n_identificacion"])
+        print("Nombre:", i["Nombre"])
+        print("")
+        print("")
+    camper_a_mover_a_grupo=int(print("Ingrese el ID de el camper que desea asignar a un grupo: \n --> "))
 
 
-
-
+#########################################################################################################################################################################
 def ingreso_de_notas():
     with open("inscritos.json", "r") as file:
         inscritos = json.load(file)

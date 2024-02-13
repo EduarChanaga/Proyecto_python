@@ -31,7 +31,7 @@ def cordinador():
             if opciones_campers==1:
                 print(opcionescampers.inscripcion())
             elif opciones_campers==2:
-                print()
+                print(opcionescampers.matriculas())
             elif opciones_campers==3:
                 print(opcionescampers.ingreso_de_notas())
 

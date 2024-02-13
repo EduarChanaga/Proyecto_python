@@ -11,6 +11,17 @@
                 "Estado": "aprobado",
                 "Riesgo": ""
                 
+            },
+            {
+                "n_identificacion": 231243243,
+                "Nombre": "pedro alfonso carbajal",
+                "Direccion": "crr 11",
+                "Acudiente": "rubi",
+                "Celular": "123",
+                "Fijo": "34",
+                "Estado": "aprobado",
+                "Riesgo": ""
+                
             }
         ]
     }
