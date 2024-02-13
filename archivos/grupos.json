@@ -1,17 +1,3 @@
 {
-  "grupos": {
-    "p1": [
-      {
-        "n_identificacion": 1095581646,
-        "Nombre": "eduar damian chanaga gonzalez",
-        "Direccion": "crr 11",
-        "Acudiente": "rubi",
-        "Celular": "123",
-        "Fijo": "34",
-        "Estado": "Cursando",
-        "Riesgo": ""
-      }
-    ],
-    "p2": []
-  }
+  "grupos": {}
 }

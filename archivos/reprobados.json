@@ -1,0 +1,16 @@
+{
+    "campers": {
+        "campers_reprobados": [
+            {
+                "n_identificacion": 1005444,
+                "Nombre": "pedro",
+                "Direccion": "cll 21",
+                "Acudiente": "raro",
+                "Celular": "542574",
+                "Fijo": "525",
+                "Estado": "reprobado",
+                "Riesgo": ""
+            }
+        ]
+    }
+}

@@ -90,6 +90,8 @@ def ingreso_de_notas():
         inscritos = json.load(file)
     with open("aprobados.json","r") as file:
         aprobados=json.load(file)
+    with open("reprobados.json","r") as file:
+        reprobados=json.load(file)
     
     print("1. Notas de ingreso")
     seleccion_notas = int(input("--> "))
@@ -109,6 +111,8 @@ def ingreso_de_notas():
                     inscritos['campers']['campers_inscritos'].remove(camper)
                 else:
                     camper["Estado"]="reprobado"
+                    reprobados["campers"]["campers_reprobados"].append(camper)
+                    inscritos['campers']['campers_inscritos'].remove(camper)
                 break
         else:
             print("Camper no encontrado")
@@ -118,3 +122,5 @@ def ingreso_de_notas():
 
     with open("aprobados.json", "w") as file:
         json.dump(aprobados, file, indent=4)
+    with open("reprobados.json", "w") as file:
+        json.dump(reprobados, file, indent=4)
