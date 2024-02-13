@@ -8,16 +8,18 @@
         "Celular": "313 3950318",
         "Fijo": "242 45238445",
         "Horario 1": 1,
-        "horario 2": 4
+        "horario 2": 4,
+        "ruta":""
       },
       {
-        "n_identificacion": 1095581647,
+        "n_identificacion": 109558123647,
         "Nombre": "Alfredo ",
         "Direccion": "crr 11",
         "Celular": "23432 ",
         "Fijo": "234324 ",
         "Horario 1": 2,
-        "horario 2": 0
+        "horario 2": 0,
+        "ruta":""
       },
       {
         "n_identificacion": 2348237486343,
@@ -26,7 +28,8 @@
         "Celular": "313 45487364757",
         "Fijo": "7854953",
         "Horario 1": 3,
-        "horario 2": 4
+        "horario 2": 4,
+        "ruta":""
       }
     ]
   }

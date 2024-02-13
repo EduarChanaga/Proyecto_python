@@ -41,7 +41,8 @@ def ingreso_trainer():
             "Celular": trainer_celular,
             "Fijo": trainer_fijo,
             "Horario 1":trainer_horario,
-            "horario 2":horario2
+            "horario 2":horario2,
+            "ruta":""
         }
         
 
