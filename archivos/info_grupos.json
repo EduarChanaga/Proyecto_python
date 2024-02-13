@@ -1,24 +1,7 @@
 {
   "campus": {
     "grupo": [
-      {
-        "nombre_grupo": "p1",
-        "Horario 1": 1,
-        "trainer": {
-          "ID": "1095581647",
-          "Nombre": "Pedrito perez"
-        },
-        "ruta": ""
-      },
-      {
-        "nombre_grupo": "p2",
-        "Horario 1": 4,
-        "trainer": {
-          "ID": "2348237486343",
-          "Nombre": "pedro daza"
-        },
-        "ruta": ""
-      }
+
     ]
   }
 }
