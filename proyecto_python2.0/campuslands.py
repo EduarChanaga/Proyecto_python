@@ -9,7 +9,7 @@ def clear():
         os.system('clear')
 while True:
     clear()
-    print("-----------------------")
+    print("\033[1;30m-----------------------")
     print("       Campuslands     ")
     print(" seguimiento academico ")
     print("-----------------------")
