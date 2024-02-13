@@ -44,17 +44,44 @@ def inscripcion():
 #########################################################################################################################################################################
 
 def matriculas():
-    with open("aprobados.json","r") as file:
-        aprobados=json.load(file)
-    with open("grupos.json","r") as file:
-        grupos=json.load(file)
-    aprobados=aprobados["campers"]["campers_aprobados"]
+    with open("aprobados.json", "r") as file:
+        aprobados = json.load(file)
+    with open("grupos.json", "r") as file:
+        grupos = json.load(file)
+
+    aprobados = aprobados["campers"]["campers_aprobados"]
+    grupos = grupos["grupos"]
     for i in aprobados:
         print("ID:", i["n_identificacion"])
         print("Nombre:", i["Nombre"])
-        print("")
-        print("")
-    camper_a_mover_a_grupo=int(print("Ingrese el ID de el camper que desea asignar a un grupo: \n --> "))
+        print("\n")
+
+    print("Grupos:")
+    for grupo in grupos:
+        print(grupo)
+
+    camper_a_mover_a_grupo = int(input("Ingrese el ID del camper que desea asignar a un grupo: "))
+    
+    for i in range(len(aprobados)):
+        if aprobados[i]['n_identificacion'] == camper_a_mover_a_grupo:
+            camper = aprobados.pop(i)
+            camper['Estado'] = 'Cursando'
+
+            grupo = input("Ingrese el nombre del grupo al que desea asignar al camper: ")
+
+            if grupo in grupos:
+                grupos[grupo].append(camper)
+                break
+            else:
+                print("El grupo ingresado no existe.")
+                break
+
+    with open('aprobados.json', 'w') as file:
+            json.dump({"campers": {"campers_aprobados": aprobados}}, file, indent=2)
+
+    with open('grupos.json', 'w') as file:
+            json.dump({"grupos": grupos}, file, indent=2)
+
 
 
 #########################################################################################################################################################################
