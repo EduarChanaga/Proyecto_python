@@ -142,3 +142,55 @@ def ingreso_de_notas():
         json.dump(reprobados, file, indent=4)
     with open("aprobaron_examen_ingreso.json", "w") as file:
         json.dump(aprobaron_examen_ingreso, file, indent=4)
+
+def graduados():
+    # Cargar datos de grupos y graduados desde los archivos JSON
+    with open('grupos.json', 'r') as file:
+        grupos = json.load(file)
+
+    with open('graduados.json', 'r') as file:
+        graduados = json.load(file)
+
+    # Preguntar si se quiere matricular un camper
+    matricular = input("¿Desea graduar un camper? (si/no): ")
+    clear()
+    if matricular.lower() == 'si':
+        # Mostrar grupos disponibles
+        print("Grupos disponibles:")
+        for grupo in grupos['grupos']:
+            print(grupo)
+
+        # Elegir un grupo
+        grupo_elegido = input("Elija un grupo: ")
+        clear()
+        # Mostrar campers en el grupo elegido
+        print("Campers en el grupo:")
+        for camper in grupos['grupos'][grupo_elegido]:
+            print(f"Nombre: {camper['Nombre']}, ID: {camper['n_identificacion']}")
+
+        # Elegir un camper para graduar
+        id_camper_graduar = int(input("Elija el ID del camper para graduar: "))
+
+        # Buscar el camper en el grupo
+        for camper in grupos['grupos'][grupo_elegido]:
+            if camper['n_identificacion'] == id_camper_graduar:
+                # Comprobar si el camper tiene notas en los 5 módulos
+                if all(camper['modulos'].values()):
+                    # Mover el camper al archivo de graduados
+                    graduados['campers']['campers_graduados'].append(camper)
+                    grupos['grupos'][grupo_elegido].remove(camper)
+                    clear()
+                    print(f"El camper {camper['Nombre']} ha sido graduado.")
+                    dato=str(input("Enter para continuar"))
+                else:
+                    clear()
+                    print("El camper no tiene notas en los 5 módulos.")
+                    dato=str(input("Enter para continuar"))
+                break
+
+    # Guardar los cambios en los archivos JSON
+    with open('grupos.json', 'w') as file:
+        json.dump(grupos, file, indent=4)
+
+    with open('graduados.json', 'w') as file:
+        json.dump(graduados, file, indent=4)    

@@ -12,6 +12,18 @@
         "Ruta": 2,
         "Fecha_de_inicio": "23/abril/2020",
         "Fecha_de_fin": "31/febrero/2021"
+      },
+      {
+        "nombre_grupo": "p1",
+        "Horario": 2,
+        "trainer": {
+          "ID": 123,
+          "Nombre": "pedrito perez"
+        },
+        "Salon": 3,
+        "Ruta": 2,
+        "Fecha_de_inicio": "23/abril/2020",
+        "Fecha_de_fin": "31/febrero/2021"
       }
     ]
   }

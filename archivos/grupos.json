@@ -1,49 +1,49 @@
 {
-  "grupos": {
-    "p1": [
-      {
-        "n_identificacion": 1095581647,
-        "Nombre": "eduar damian chanaga gonzalez",
-        "Direccion": "crr 11",
-        "Acudiente": "rubiela",
-        "Celular": "313 3950318",
-        "Fijo": "3123453",
-        "Estado": "Cursando",
-        "Riesgo": "Alto",
-        "modulos": {
-          "Fundamentos de programacion": "",
-          "programacion web": "",
-          "programacion formal": "",
-          "bases de datos": "",
-          "backend": ""
-        },
-        "trainer": {
-          "ID": 123,
-          "Nombre": "pedrito perez"
-        }
-      },
-      {
-        "n_identificacion": 123,
-        "Nombre": "raro damian chanaga gonzalez",
-        "Direccion": "crr 11",
-        "Acudiente": "rubiela",
-        "Celular": "313 3950318",
-        "Fijo": "3123453",
-        "Estado": "Cursando",
-        "Riesgo": "",
-        "modulos": {
-          "Fundamentos de programacion": "",
-          "programacion web": "",
-          "programacion formal": "",
-          "bases de datos": "",
-          "backend": ""
-        },
-        "trainer": {
-          "ID": 123,
-          "Nombre": "pedrito perez"
-        }
-      }
-    ],
-    "p2": []
-  }
+    "grupos": {
+        "p1": [],
+        "p2": [
+            {
+                "n_identificacion": 1095581647,
+                "Nombre": "eduar damian chanaga gonzalez",
+                "Direccion": "crr 11",
+                "Acudiente": "rubiela",
+                "Celular": "313 3950318",
+                "Fijo": "3123453",
+                "Estado": "Cursando",
+                "Riesgo": "Alto",
+                "modulos": {
+                    "Fundamentos de programacion": "",
+                    "programacion web": "",
+                    "programacion formal": "",
+                    "bases de datos": "",
+                    "backend": ""
+                },
+                "trainer": {
+                    "ID": 123,
+                    "Nombre": "pedrito perez"
+                }
+            },
+            {
+                "n_identificacion": 123,
+                "Nombre": "raro damian chanaga gonzalez",
+                "Direccion": "crr 11",
+                "Acudiente": "rubiela",
+                "Celular": "313 3950318",
+                "Fijo": "3123453",
+                "Estado": "Cursando",
+                "Riesgo": "",
+                "modulos": {
+                    "Fundamentos de programacion": "",
+                    "programacion web": "",
+                    "programacion formal": 1,
+                    "bases de datos": "",
+                    "backend": ""
+                },
+                "trainer": {
+                    "ID": 123,
+                    "Nombre": "pedrito perez"
+                }
+            }
+        ]
+    }
 }

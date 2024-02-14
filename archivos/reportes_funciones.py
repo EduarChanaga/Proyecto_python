@@ -71,8 +71,39 @@ def bajo_rendimiento():
     print()
     cl=str(input("Enter para continuar"))
     clear()
+
 def rutas_campers_trainer():
-    print()
+    
+# Cargar los datos de los archivos JSON
+    with open('grupos.json', 'r') as file:
+        grupos_data = json.load(file)
+
+    with open('info_grupos.json', 'r') as file:
+        info_grupos_data = json.load(file)
+
+    # Obtener la ruta elegida por el usuario
+    print("1. Ruta NodeJS")
+    print("2. Ruta Java")
+    print("3. Ruta NetCore")
+    ruta_elegida = input("Ingrese la ruta a buscar: ")
+    clear()
+    # Buscar los grupos con la ruta elegida
+    grupos_con_ruta = [grupo for grupo in info_grupos_data["campus"]["grupo"] if str(grupo["Ruta"]) == ruta_elegida]
+
+    # Imprimir los campers de los grupos con la ruta elegida
+    for grupo in grupos_con_ruta:
+        grupo_id = grupo["nombre_grupo"]
+        print("")
+        print("---------------")
+        print("Trainer:")
+        print(f"- {grupo['trainer']['Nombre']}")
+        print()
+        print(f"Campers en el grupo {grupo_id}:")
+        for camper in grupos_data["grupos"][grupo_id]:
+            print(f"Nombre: {camper['Nombre']}, ID: {camper['n_identificacion']}")
+    print("")    
+    cl=str(input("Enter para continuar"))
+    clear()
 
 def perdieron_aprobaron_modulo():
     print()
