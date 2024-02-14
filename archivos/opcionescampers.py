@@ -75,7 +75,6 @@ def matriculas():
                        "bases de datos":"",
                        "backend":""    
                     }
-            
 
             grupo = input("Ingrese el nombre del grupo al que desea asignar al camper: ")
 

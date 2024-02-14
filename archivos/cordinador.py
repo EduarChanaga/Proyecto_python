@@ -2,6 +2,7 @@ import os
 import opcionescampers
 import opcionestrainers
 import opcionesrutas
+import reportes
 def clear():
     if os.name == 'nt':
         os.system('cls')        # Funcion para limpiar la terminal
@@ -16,10 +17,11 @@ def cordinador():
         print(" ¿Que desea realizar? ")
         print("1. Ver opciones sobre los campers")
         print("2. Ver opciones sobre los trainers")
-        print("3. Grupos")
+        print("3. Grupos (creacion, vista...)")
         print("4. Reportes")
         print("5. salir")
         opciones_cordinador=int(input("--> "))
+        clear()
 
 
 
@@ -50,6 +52,7 @@ def cordinador():
             print("3. Ver informacion de trainer")    
             print("4. salir")
             opciones_trainers=int(input("--> ")) 
+            clear()
             if opciones_trainers==1:
                 print(opcionestrainers.ingreso_trainer())
             elif opciones_trainers==2:
@@ -68,6 +71,7 @@ def cordinador():
             print("3. Ver informacion de trainer")    
             print("4. salir")
             opciones_rutas=int(input("--> ")) 
+            clear()
             if opciones_rutas==1:
                 print(opcionesrutas.crear_grupo())
             elif opciones_rutas==2:
@@ -80,7 +84,7 @@ def cordinador():
 
 
         elif opciones_cordinador==4:
-            print("")
+            print(reportes.reportes())
         elif opciones_cordinador==5:
             clear()
             return

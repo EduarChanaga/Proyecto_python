@@ -9,7 +9,7 @@
         "Celular": "313 3950318",
         "Fijo": "3123453",
         "Estado": "Cursando",
-        "Riesgo": "",
+        "Riesgo": "Alto",
         "modulos": {
           "Fundamentos de programacion": "",
           "programacion web": "",

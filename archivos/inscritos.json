@@ -1,5 +1,46 @@
 {
-    "campers": {
-        "campers_inscritos": []
-    }
+  "campers": {
+    "campers_inscritos": [
+      {
+        "n_identificacion": 1,
+        "Nombre": "1",
+        "Direccion": "1",
+        "Acudiente": "1",
+        "Celular": "1",
+        "Fijo": "1",
+        "Estado": "inscritos",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 2,
+        "Nombre": "2",
+        "Direccion": "2",
+        "Acudiente": "2",
+        "Celular": "2",
+        "Fijo": "2",
+        "Estado": "inscritos",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 3,
+        "Nombre": "3",
+        "Direccion": "3",
+        "Acudiente": "3",
+        "Celular": "3",
+        "Fijo": "3",
+        "Estado": "inscritos",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 4,
+        "Nombre": "4",
+        "Direccion": "4",
+        "Acudiente": "4",
+        "Celular": "4",
+        "Fijo": "4",
+        "Estado": "inscritos",
+        "Riesgo": ""
+      }
+    ]
+  }
 }
