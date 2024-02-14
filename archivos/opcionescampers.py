@@ -43,7 +43,7 @@ def inscripcion():
     with open('inscritos.json', 'w') as file:
         json.dump({"campers": {"campers_inscritos": inscritos}}, file, indent=2)
 #########################################################################################################################################################################
-#matricular a un camper (asignar grupo)
+#expulzar a un camper (asignar grupo)
 def matriculas():
     with open("aprobados.json", "r") as file:
         aprobados = json.load(file)
@@ -143,18 +143,18 @@ def ingreso_de_notas():
     with open("aprobaron_examen_ingreso.json", "w") as file:
         json.dump(aprobaron_examen_ingreso, file, indent=4)
 
-def graduados():
-    # Cargar datos de grupos y graduados desde los archivos JSON
+def expulsar_camper():
+    # Cargar datos de grupos y expulsados desde los archivos JSON
     with open('grupos.json', 'r') as file:
         grupos = json.load(file)
 
-    with open('graduados.json', 'r') as file:
-        graduados = json.load(file)
+    with open('expulsados.json', 'r') as file:
+        expulsados = json.load(file)
 
-    # Preguntar si se quiere matricular un camper
-    matricular = input("¿Desea graduar un camper? (si/no): ")
+    # Preguntar si se quiere expulsar un camper
+    expulsar = input("¿Desea expulsar un camper? (si/no): ")
     clear()
-    if matricular.lower() == 'si':
+    if expulsar.lower() == 'si':
         # Mostrar grupos disponibles
         print("Grupos disponibles:")
         for grupo in grupos['grupos']:
@@ -168,32 +168,32 @@ def graduados():
         for camper in grupos['grupos'][grupo_elegido]:
             print(f"Nombre: {camper['Nombre']}, ID: {camper['n_identificacion']}")
 
-        # Elegir un camper para graduar
-        id_camper_graduar = int(input("Elija el ID del camper para graduar: "))
+        # Elegir un camper para expulsar
+        id_camper_expulsar = int(input("Elija el ID del camper para expulsar: "))
 
         # Buscar el camper en el grupo
         for camper in grupos['grupos'][grupo_elegido]:
-            if camper['n_identificacion'] == id_camper_graduar:
-                # Comprobar si el camper tiene notas en los 5 módulos
-                if all(camper['modulos'].values()):
-                    # Mover el camper al archivo de graduados
-                    graduados['campers']['campers_graduados'].append(camper)
-                    grupos['grupos'][grupo_elegido].remove(camper)
-                    clear()
-                    print(f"El camper {camper['Nombre']} ha sido graduado.")
-                    dato=str(input("Enter para continuar"))
-                else:
-                    clear()
-                    print("El camper no tiene notas en los 5 módulos.")
-                    dato=str(input("Enter para continuar"))
+            if camper['n_identificacion'] == id_camper_expulsar:
+                # Cambiar el estado del camper a "expulsado"
+                camper['Estado'] = 'Expulsado'
+                # Mover el camper al archivo de expulsados
+                expulsados["campers"]['campers_expulsados'].append(camper)
+                grupos['grupos'][grupo_elegido].remove(camper)
+                clear()
+                print(f"El camper {camper['Nombre']} ha sido expulsado.")
+                input("Presione Enter para continuar...")
                 break
+        else:
+            clear()
+            print("Camper no encontrado.")
+            input("Presione Enter para continuar...")
 
     # Guardar los cambios en los archivos JSON
     with open('grupos.json', 'w') as file:
         json.dump(grupos, file, indent=4)
 
-    with open('graduados.json', 'w') as file:
-        json.dump(graduados, file, indent=4)    
+    with open('expulsados.json', 'w') as file:
+        json.dump(expulsados, file, indent=4)
 
 def modificar_notas():
     with open("grupos.json", "r") as file:
