@@ -10,9 +10,9 @@
                 "Celular": "313 3950318",
                 "Fijo": "3123453",
                 "Estado": "Cursando",
-                "Riesgo": "Alto",
+                "Riesgo": "Bajo",
                 "modulos": {
-                    "Fundamentos de programacion": 100,
+                    "Fundamentos de programacion": 60.300000000000004,
                     "programacion web": "",
                     "programacion formal": "",
                     "bases de datos": "",

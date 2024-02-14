@@ -50,8 +50,12 @@ def ingreso_notas():
                         print("Nota ingresada correctamente.")
                     else:
                         print("Ya existe una nota registrada para este módulo. No se puede ingresar una nueva nota.")
+                        print("¡comuniquese con cordinacion para realizar algun cambio!")
                 else:
                     print("El número de módulo ingresado no es válido.")
+                print("")
+                dato=str(input("Enter para continuar"))
+                clear()
                 break
         else:
             print("Alumno no encontrado en el grupo.")
