@@ -74,13 +74,13 @@
                 "Celular": "313 3950318",
                 "Fijo": "3123453",
                 "Estado": "Cursando",
-                "Riesgo": "",
+                "Riesgo": "Riesgo alto",
                 "modulos": {
                     "Fundamentos de programacion": "",
                     "programacion web": "",
                     "programacion formal": "",
                     "bases de datos": "",
-                    "backend": ""
+                    "backend": 37.5
                 },
                 "trainer": {
                     "ID": 123,

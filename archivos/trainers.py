@@ -49,7 +49,7 @@ def trainers():
     while True:
         print("¿Qué desea realizar?")
         print("1. Ver grupos según entrenador")
-        print("2. Asignar notas")
+        print("2. Ingresar notas de campers")
         print("3. Salir")
 
         opcion = input("--> ")
