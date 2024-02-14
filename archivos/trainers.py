@@ -67,4 +67,4 @@ def trainers():
             break
         else:
             print("Opción no válida, por favor, elija una opción válida.")
-
+   

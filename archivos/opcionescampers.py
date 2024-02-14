@@ -48,6 +48,8 @@ def matriculas():
         aprobados = json.load(file)
     with open("grupos.json", "r") as file:
         grupos = json.load(file)
+    with open("info_grupos.json","r") as file:
+        info_grupos=json.load(file)
 
     aprobados = aprobados["campers"]["campers_aprobados"]
     grupos = grupos["grupos"]
@@ -66,23 +68,39 @@ def matriculas():
         if aprobados[i]['n_identificacion'] == camper_a_mover_a_grupo:
             camper = aprobados.pop(i)
             camper['Estado'] = 'Cursando'
+            camper["modulos"]={"Fundamentos de programacion":"",
+                       "programacion web":"",
+                       "programacion formal":"",
+                       "bases de datos":"",
+                       "backend":""    
+                    }
+            
 
             grupo = input("Ingrese el nombre del grupo al que desea asignar al camper: ")
 
-            if grupo in grupos:
-                grupos[grupo].append(camper)
+        if grupo in grupos:
+            if len(grupos[grupo]) >= 33:
+                print("El grupo ya tiene 33 campers. No se puede agregar más.")
                 break
-            else:
-                print("El grupo ingresado no existe.")
-                break
+            grupos[grupo].append(camper)
+
+            # Agregar el entrenador al camper
+            for g in info_grupos["campus"]["grupo"]:
+                if g["nombre_grupo"] == grupo:
+                    camper["trainer"] = g["trainer"]
+                    break
+
+            break
+        else:
+            print("El grupo ingresado no existe.")
+            break
+
 
     with open('aprobados.json', 'w') as file:
-            json.dump({"campers": {"campers_aprobados": aprobados}}, file, indent=2)
+        json.dump({"campers": {"campers_aprobados": aprobados}}, file, indent=2)
 
     with open('grupos.json', 'w') as file:
-            json.dump({"grupos": grupos}, file, indent=2)
-
-
+        json.dump({"grupos": grupos}, file, indent=2)
 
 #########################################################################################################################################################################
 def ingreso_de_notas():

@@ -2,11 +2,11 @@
   "campers": {
     "trainers": [
       {
-        "n_identificacion": 12342,
-        "Nombre": "Pedro as as as",
-        "Direccion": "crr 343",
-        "Celular": "3132 25132",
-        "Fijo": "45234"
+        "n_identificacion": 123,
+        "Nombre": "pedrito perez",
+        "Direccion": "crr 34",
+        "Celular": "24123 1545",
+        "Fijo": "1232145"
       }
     ]
   }

@@ -27,13 +27,8 @@ def campers():
             "Celular": str(input("Numero celular: ")),
             "Fijo": str(input("Numero fijo: ")), 
             "Estado": "proceso_de_inscripcion",
-            "Riesgo": "",
-            "modulos":{"Fundamentos de programacion":"",
-                       "programacion web":"",
-                       "programacion formal":"",
-                       "bases de datos":"",
-                       "backend":""    
-                    }
+            "Riesgo": ""
+        
         }
 
         proceso_de_inscripcion["campers"]["campers_pre_inscritos"].append(nuevo_dato)  # Agregar datos al archivo JSON

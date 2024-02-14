@@ -40,6 +40,6 @@ def ingreso_trainer():
 
         with open('trainers.json', 'w') as file:
             json.dump(trainers, file, indent=2)  # Guardar cambios
-
+            
         print(" ingreso trainer exitoso! ")
 
