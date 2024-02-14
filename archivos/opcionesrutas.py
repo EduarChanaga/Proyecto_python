@@ -1,7 +1,9 @@
 import os
 import json
 
-def crear_grupo():
+#crear grupo
+######################################################################################################################################
+def crear_grupo(): 
     print("")
     def clear():
         if os.name == 'nt':
@@ -28,8 +30,10 @@ def crear_grupo():
         clear()
         # Ingreso de datos del entrenador
         grupo_nombre = input("Nombre del grupo: ")
+        clear()
+        print("- Horario del grupo -")
         grupo_horario = int(input("1. (6:00)\n2. (10:00)\n3. (14:00)\n4. (18:00)\n-> "))
-        
+        clear()
         # Mostrar la lista de entrenadores con su ID y nombre
         for trainer in trainers["campers"]["trainers"]:
             print("ID:", trainer["n_identificacion"])
@@ -40,24 +44,31 @@ def crear_grupo():
 ######################################################################################################################################
         #Agregar entrenador a nuevo grupo
         while True:
-            grupo = input("Ingresa la ID del entrenador que deseas seleccionar: ")
+            print("Ingresa la ID del entrenador que deseas seleccionar")
+            print("0 = cancelar")
+            grupo = int(input("--> "))
+            if grupo!=0:
+                
+                # Buscar el entrenador por su ID
+                grupo_trainer = None
+                for trainer in trainers["campers"]["trainers"]:
+                    if int(trainer["n_identificacion"]) == grupo:
+                        grupo_trainer = {
+                            "ID": grupo,
+                            "Nombre": trainer["Nombre"]
+                        }
+                        break
 
-            # Buscar el entrenador por su ID
-            grupo_trainer = None
-            for trainer in trainers["campers"]["trainers"]:
-                if str(trainer["n_identificacion"]) == grupo:
-                    grupo_trainer = {
-                        "ID": grupo,
-                        "Nombre": trainer["Nombre"]
-                    }
+                if grupo_trainer:
+                    print("Entrenador seleccionado:", grupo_trainer["Nombre"])
                     break
-
-            if grupo_trainer:
-                print("Entrenador seleccionado:", grupo_trainer["Nombre"])
-                break
-            else:
-                print("La ID del entrenador ingresada no existe. Intenta de nuevo.")
-
+                else:
+                    print("La ID del entrenador ingresada no existe. Intenta de nuevo.")
+                    print("")
+                    print("")
+            if grupo ==0:
+                clear()
+                return
         # Verificar si el entrenador ya está asignado a otro grupo en el mismo horario
         entrenador_existente = False
         for grupo in info_grupos["campus"]["grupo"]:
@@ -128,3 +139,20 @@ def crear_grupo():
             json.dump(info_grupos, file, indent=2)  # Guardar cambios
 
         print("Creacion de grupo exitosa! ")
+
+#ver grupo
+def ver_grupos():
+    def clear():
+        if os.name == 'nt':
+            os.system('cls')        # Funcion para limpiar la terminal
+        else:
+            os.system('clear')
+    with open('grupos.json', 'r') as o:
+        grupos = json.load(o)
+    clear()
+    grupos = grupos["grupos"]
+    for grupo in grupos:
+        print(grupo)
+    print("")
+    print("")
+    

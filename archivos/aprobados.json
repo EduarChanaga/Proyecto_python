@@ -1,26 +1,5 @@
 {
-    "campers": {
-        "campers_aprobados": [
-            {
-                "n_identificacion": 1544,
-                "Nombre": "andres p",
-                "Direccion": "cll 27b ",
-                "Acudiente": "jair",
-                "Celular": "300224",
-                "Fijo": "652",
-                "Estado": "aprobado",
-                "Riesgo": ""
-            },
-            {
-                "n_identificacion": 1445,
-                "Nombre": "canco",
-                "Direccion": "cll 28",
-                "Acudiente": "pedro",
-                "Celular": "300224",
-                "Fijo": "5256",
-                "Estado": "aprobado",
-                "Riesgo": ""
-            }
-        ]
-    }
+  "campers": {
+    "campers_aprobados": []
+  }
 }

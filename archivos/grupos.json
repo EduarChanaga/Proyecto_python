@@ -1,3 +1,16 @@
 {
-  "grupos": {}
+  "grupos": {
+    "p1": [
+      {
+        "n_identificacion": 1095581647,
+        "Nombre": "Eduar Damian Chanaga Gonzale",
+        "Direccion": "crr 11",
+        "Acudiente": "rubiela",
+        "Celular": "313 3950318",
+        "Fijo": "343434",
+        "Estado": "Cursando",
+        "Riesgo": ""
+      }
+    ]
+  }
 }

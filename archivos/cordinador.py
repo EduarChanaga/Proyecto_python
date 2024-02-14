@@ -16,8 +16,9 @@ def cordinador():
         print(" ¿Que desea realizar? ")
         print("1. Ver opciones sobre los campers")
         print("2. Ver opciones sobre los trainers")
-        print("3. Rutas de entrenamiento")
+        print("3. Grupos")
         print("4. Reportes")
+        print("5. salir")
         opciones_cordinador=int(input("--> "))
 
 
@@ -26,7 +27,8 @@ def cordinador():
             clear()
             print("1. Inscripcion") 
             print("2. Matriculas")    
-            print("3. Ingreso de notas")    
+            print("3. Nota de ingreso")    
+            print("4. salir")
             opciones_campers=int(input("--> ")) 
             if opciones_campers==1:
                 print(opcionescampers.inscripcion())
@@ -34,6 +36,9 @@ def cordinador():
                 print(opcionescampers.matriculas())
             elif opciones_campers==3:
                 print(opcionescampers.ingreso_de_notas())
+            elif opciones_campers==4:
+                print()
+                clear()
 
 
 
@@ -43,6 +48,7 @@ def cordinador():
             print("1. Ingreso de trainer") 
             print("2. Ver rutas segun trainers")    
             print("3. Ver informacion de trainer")    
+            print("4. salir")
             opciones_trainers=int(input("--> ")) 
             if opciones_trainers==1:
                 print(opcionestrainers.ingreso_trainer())
@@ -50,6 +56,9 @@ def cordinador():
                 print()
             elif opciones_trainers==3:
                 print(opcionescampers.ingreso_de_notas())()
+            elif opciones_trainers==4:
+                print()
+                clear()
 
 
 
@@ -57,15 +66,21 @@ def cordinador():
             print("1. Crear grupo") 
             print("2. Ver grupos")    
             print("3. Ver informacion de trainer")    
+            print("4. salir")
             opciones_rutas=int(input("--> ")) 
             if opciones_rutas==1:
                 print(opcionesrutas.crear_grupo())
             elif opciones_rutas==2:
-                print()
+                print(opcionesrutas.ver_grupos())
             elif opciones_rutas==3:
                 print()
+            elif opciones_rutas==4:
+                clear()
 
 
 
         elif opciones_cordinador==4:
+            print("")
+        elif opciones_cordinador==5:
             clear()
+            return

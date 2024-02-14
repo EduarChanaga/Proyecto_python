@@ -26,23 +26,12 @@ def ingreso_trainer():
         trainer_direccion=str(input("Direccion: "))
         trainer_celular=str(input("Numero celular: "))
         trainer_fijo=str(input("Numero fijo: "))
-        trainer_horario=int(input(" 1.(6:00)\n 2.(10:00)\n 3.(14:00) \n 4.(18:00)\n 5.(mixto) \n -> "))
-        horario2=0
-        clear()
-        if trainer_horario==5:
-            print("Escoge los horarios")
-            print(" 1.(6:00)\n 2.(10:00)\n 3.(14:00) \n 4.(18:00)")
-            trainer_horario=int(input("Horario 1: "))
-            horario2=int(input("Horario 2: "))
         nuevo_dato = {
             "n_identificacion": trainer_n_ident,
             "Nombre": trainer_nombre,
             "Direccion": trainer_direccion,
             "Celular": trainer_celular,
-            "Fijo": trainer_fijo,
-            "Horario 1":trainer_horario,
-            "horario 2":horario2,
-            "ruta":""
+            "Fijo": trainer_fijo
         }
         
 
