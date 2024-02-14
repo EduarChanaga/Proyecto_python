@@ -1,5 +1,26 @@
 {
-  "campers": {
-    "campers_aprobados": []
-  }
+    "campers": {
+        "campers_aprobados": [
+            {
+                "n_identificacion": 12345,
+                "Nombre": "kenia",
+                "Direccion": "crr 11",
+                "Acudiente": "kenia2",
+                "Celular": "313 3950381",
+                "Fijo": "4543",
+                "Estado": "aprobado",
+                "Riesgo": ""
+            },
+            {
+                "n_identificacion": 12345678,
+                "Nombre": "brayan",
+                "Direccion": "123123",
+                "Acudiente": "qweqw",
+                "Celular": "asda",
+                "Fijo": "asd",
+                "Estado": "aprobado",
+                "Riesgo": ""
+            }
+        ]
+    }
 }

@@ -17,6 +17,7 @@ def inscripcion():
         datos = json.load(file)
     with open("inscritos.json", "r") as file:
         inscritos = json.load(file)
+    
 
     # Buscar al pre_inscrito por su número de identificación
     pre_inscritos = datos['campers']['campers_pre_inscritos']
@@ -110,7 +111,8 @@ def ingreso_de_notas():
         aprobados=json.load(file)
     with open("reprobados.json","r") as file:
         reprobados=json.load(file)
-    
+    with open("aprobaron_examen_ingreso.json","r") as i:
+        aprobaron_examen_ingreso=json.load(i)
     for camper in inscritos['campers']['campers_inscritos']:  # Iterar sobre la lista de campers inscritos
         print("Numero de identificacion:", camper["n_identificacion"], "   Nombre: ",camper["Nombre"])
     identificacion = int(input("Ingrese la identificacion del camper: "))
@@ -121,6 +123,7 @@ def ingreso_de_notas():
             promedio = (nota_teorica + nota_practica) / 2
             if promedio >=60:
                 camper["Estado"]="aprobado"
+                aprobaron_examen_ingreso["campers"]["aprobaron_examen_ingreso"].append(camper)
                 aprobados["campers"]["campers_aprobados"].append(camper)
                 inscritos['campers']['campers_inscritos'].remove(camper)
             else:
@@ -138,3 +141,5 @@ def ingreso_de_notas():
         json.dump(aprobados, file, indent=4)
     with open("reprobados.json", "w") as file:
         json.dump(reprobados, file, indent=4)
+    with open("aprobaron_examen_ingreso.json", "w") as file:
+        json.dump(aprobaron_examen_ingreso, file, indent=4)

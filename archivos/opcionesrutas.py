@@ -112,15 +112,26 @@ def crear_grupo():
         print("3. Ruta NetCore")
         grupo_ruta=int(input("Ingrese N° de ruta: "))
         
-        
-        
+        print("Fecha de inicio")
+        año=str(input("Año: "))
+        mes=str(input("Mes: "))
+        Dia=str(input("Dia: "))
+        fecha_de_inicio=Dia+"/"+mes+"/"+año
+        print("")
+        print("Fecha de fin")
+        año=str(input("Año: "))
+        mes=str(input("Mes: "))
+        Dia=str(input("Dia: "))
+        fecha_de_fin=Dia+"/"+mes+"/"+año
         #Guardar datos en un diccionario
         nuevo_dato = {
             "nombre_grupo": grupo_nombre,
             "Horario": grupo_horario,
             "trainer": grupo_trainer,
             "Salon":grupo_salon,
-            "Ruta":grupo_ruta
+            "Ruta":grupo_ruta,
+            "Fecha_de_inicio":fecha_de_inicio,
+            "Fecha_de_fin":fecha_de_fin
         }
         
         # Agregar el grupo al archivo JSON
