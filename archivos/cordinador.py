@@ -25,17 +25,17 @@ def cordinador():
 
         if opciones_cordinador==1:  #opciones campers
             clear()
-            print("1. Inscripcion") 
-            print("2. Matriculas")    
-            print("3. Nota de ingreso")    
+            print("1. Inscripcion ( Autorizar campers para realizar la prueba de ingreso)")    
+            print("2. Ingresar la nota de los campers que se han registrado")   
+            print("3. Matriculas ( Asignar grupo a camper Aprobado)")  
             print("4. salir")
             opciones_campers=int(input("--> ")) 
             if opciones_campers==1:
                 print(opcionescampers.inscripcion())
             elif opciones_campers==2:
-                print(opcionescampers.matriculas())
-            elif opciones_campers==3:
                 print(opcionescampers.ingreso_de_notas())
+            elif opciones_campers==3:
+                print(opcionescampers.matriculas())
             elif opciones_campers==4:
                 print()
                 clear()

@@ -80,7 +80,7 @@ def matriculas():
 
         if grupo in grupos:
             if len(grupos[grupo]) >= 33:
-                print("El grupo ya tiene 33 campers. No se puede agregar más.")
+                print("No hay disponibilidad para este grupo.")
                 break
             grupos[grupo].append(camper)
 

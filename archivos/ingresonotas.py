@@ -38,7 +38,17 @@ def ingreso_notas():
                     quizes = float(input(f"Ingrese la nota de quizes y tareas: "))
                     nota=(teorica*0.3)+(practica*0.6)+(quizes*0.1)
                     if nota <60:
-                        alumno["Riesgo"] = "Riesgo alto"
+                        alumno["Riesgo"] = "alto"
+                    elif nota >=60 and nota<=85:
+                        print("")
+                        alumno["Riesgo"] = "Bajo"
+                        print(f"El camper aprobo el modulo {modulo}")
+                        print("")
+                    elif nota >85:
+                        print("")
+                        alumno["Riesgo"] = "Nulo"
+                        print(f"El camper aprobo el modulo {modulo}")
+                        print("")
                     alumno["modulos"][modulo] = nota
                     print("Nota ingresada correctamente.")
                 else:
