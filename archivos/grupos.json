@@ -12,7 +12,7 @@
                 "Estado": "Cursando",
                 "Riesgo": "Alto",
                 "modulos": {
-                    "Fundamentos de programacion": "",
+                    "Fundamentos de programacion": 100,
                     "programacion web": "",
                     "programacion formal": "",
                     "bases de datos": "",

@@ -31,7 +31,8 @@ def cordinador():
             print("2. Ingresar la nota de los campers que se han registrado")   
             print("3. Matriculas ( Asignar grupo a camper Aprobado)")  
             print("4. Graduar campers (comprueba que todos los modulos fueron realizados)")
-            print("5. salir")
+            print("5. Modificar nota de modulo de camper")
+            print("6. salir")
             opciones_campers=int(input("--> ")) 
             clear()
             if opciones_campers==1:
@@ -43,6 +44,8 @@ def cordinador():
             elif opciones_campers==4:
                 print(opcionescampers.graduados())
             elif opciones_campers==5:
+                print(opcionescampers.modificar_notas())
+            elif opciones_campers==6:
                 print()
                 clear()
 

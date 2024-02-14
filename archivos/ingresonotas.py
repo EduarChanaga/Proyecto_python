@@ -33,24 +33,23 @@ def ingreso_notas():
                     modulo = list(alumno["modulos"].keys())[modulo_seleccionado - 1]
                     clear()
                     print(f"--> {modulo} <--")
-                    teorica = float(input(f"Ingrese la nota de la prueba teorica: "))
-                    practica = float(input(f"Ingrese la nota de la prueba practica': "))
-                    quizes = float(input(f"Ingrese la nota de quizes y tareas: "))
-                    nota=(teorica*0.3)+(practica*0.6)+(quizes*0.1)
-                    if nota <60:
-                        alumno["Riesgo"] = "alto"
-                    elif nota >=60 and nota<=85:
-                        print("")
-                        alumno["Riesgo"] = "Bajo"
-                        print(f"El camper aprobo el modulo {modulo}")
-                        print("")
-                    elif nota >85:
-                        print("")
-                        alumno["Riesgo"] = "Nulo"
-                        print(f"El camper aprobo el modulo {modulo}")
-                        print("")
-                    alumno["modulos"][modulo] = nota
-                    print("Nota ingresada correctamente.")
+                    if modulo not in alumno["modulos"]:
+                        teorica = float(input(f"Ingrese la nota de la prueba teorica: "))
+                        practica = float(input(f"Ingrese la nota de la prueba practica': "))
+                        quizes = float(input(f"Ingrese la nota de quizes y tareas: "))
+                        nota = (teorica * 0.3) + (practica * 0.6) + (quizes * 0.1)
+                        if nota < 60:
+                            alumno["Riesgo"] = "alto"
+                        elif 60 <= nota <= 85:
+                            alumno["Riesgo"] = "Bajo"
+                            print(f"El camper aprobo el modulo {modulo}")
+                        elif nota > 85:
+                            alumno["Riesgo"] = "Nulo"
+                            print(f"El camper aprobo el modulo {modulo}")
+                        alumno["modulos"][modulo] = nota
+                        print("Nota ingresada correctamente.")
+                    else:
+                        print("Ya existe una nota registrada para este módulo. No se puede ingresar una nueva nota.")
                 else:
                     print("El número de módulo ingresado no es válido.")
                 break
