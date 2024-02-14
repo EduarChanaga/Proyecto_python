@@ -89,9 +89,9 @@ def crear_grupo():
 
 ######################################################################################################################################
         #definir aula del salon
-        print("1. Apolo")
-        print("2. Artemis")
-        print("3. Sputnik")
+        print("1. Sputnik")
+        print("2. Apolo")
+        print("3. Artemis")
         grupo_salon=int(input("Ingrese N° de salon: "))
         #verificar si el grupo ya existe con el mismo horario
         grupo_existente=False

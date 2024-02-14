@@ -10,6 +10,16 @@
         },
         "Salon": 2,
         "Ruta": 2
+      },
+      {
+        "nombre_grupo": "p2",
+        "Horario": 2,
+        "trainer": {
+          "ID": 12342,
+          "Nombre": "Pedro as as as"
+        },
+        "Salon": 1,
+        "Ruta": 2
       }
     ]
   }
