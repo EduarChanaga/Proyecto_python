@@ -8,20 +8,29 @@ def clear():
 def ingreso_notas():
     with open("grupos.json", "r") as file:
         grupos = json.load(file)
+    clear()
 
     print("Grupos disponibles:")
     for grupo in grupos["grupos"]:
         print(grupo)
-
-    grupo_seleccionado = input("Ingrese el nombre del grupo que desea seleccionar: ")
+    
+    grupo_seleccionado = str(input("Ingrese el nombre del grupo que desea seleccionar: "))
 
     if grupo_seleccionado in grupos["grupos"]:
         alumnos = grupos["grupos"][grupo_seleccionado]
         print("\nAlumnos en el grupo:")
-        for alumno in alumnos:
-            print(f"ID: {alumno['n_identificacion']} - Nombre: {alumno['Nombre']}")
-
-        id_alumno = int(input("\nIngrese el ID del alumno para ingresar la nota: "))
+        while True:
+            for alumno in alumnos:
+                print(f"ID: {alumno['n_identificacion']} - Nombre: {alumno['Nombre']}")
+            try:
+                id_alumno = int(input("\nIngrese el ID del alumno para ingresar la nota: "))
+                break
+                # Si la conversión a entero tiene éxito, salimos del bucle
+            except ValueError:
+                clear()
+                print("Por favor, ingrese un número de identificación válido (entero).")
+        
+        clear()
         for alumno in alumnos:
             if alumno['n_identificacion'] == id_alumno:
                 print("\nModulos del alumno:")

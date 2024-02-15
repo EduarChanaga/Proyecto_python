@@ -12,7 +12,7 @@
                 "Riesgo": "Bajo",
                 "modulos": {
                     "Fundamentos de programacion": 30.300000000000004,
-                    "programacion web":30,
+                    "programacion web": 30,
                     "programacion formal": 50,
                     "bases de datos": 100,
                     "backend": 60

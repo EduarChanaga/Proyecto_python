@@ -48,16 +48,16 @@ def trainers():
 
     while True:
         print("¿Qué desea realizar?")
-        print("1. Ver grupos según entrenador")
+        print("1. Ver grupos según entrenador aignado")
         print("2. Ingresar notas de campers")
         print("3. Salir")
 
-        opcion = input("--> ")
+        opcion =str(input("--> "))
 
         if opcion == "1":
+            clear()
             obtener_entrenadores(trainers)
             id_trainer = input("Ingrese el ID del entrenador: ")
-            clear()
             id_trainer = int(id_trainer)  # Convertir a entero
             grupos = obtener_grupos_por_trainer(id_trainer, info_grupos)
             imprimir_grupos(grupos)
@@ -66,5 +66,5 @@ def trainers():
         elif opcion == "3":
             break
         else:
-            print("Opción no válida, por favor, elija una opción válida.")
+            print("")
    

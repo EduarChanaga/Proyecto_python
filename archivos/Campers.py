@@ -11,30 +11,36 @@ def campers():
         with open('proceso_de_inscripcion.json', 'r') as proceso_file:
             proceso_de_inscripcion = json.load(proceso_file)  # Cargar contenido del archivo JSON a una variable
         clear()
-        print(" - Proceso de ingreso - ")
+        print(" - Proceso de pre inscripcion - ")
         print("")
-        print("Desea realizar el pree registro a campus? (Si / No)")
+        print("Desea realizar el pre registro a campus? (Si / No)")
         volver = input("-> ")
-
+        clear()
         if volver.lower() == "no":
-            return
+            break
+        if volver.lower()=="si":
+            while True:
+                try:
+                    n_identificacion = int(input("Numero de identificacion: "))
+                    break  # Si la conversión a entero tiene éxito, salimos del bucle
+                except ValueError:
+                    print("Por favor, ingrese un número de identificación válido (entero).")
 
-        nuevo_dato = {
-            "n_identificacion": int(input("Numero de identificacion: ")),
-            "Nombre": str(input("Nombre completo: ")),
-            "Direccion": str(input("Direccion: ")),
-            "Acudiente": str(input("Nombre acudiente: ")),
-            "Celular": str(input("Numero celular: ")),
-            "Fijo": str(input("Numero fijo: ")), 
-            "Estado": "proceso_de_inscripcion",
-            "Riesgo": ""
-        
-        }
+            nuevo_dato = {
+                "n_identificacion": n_identificacion,
+                "Nombre": str(input("Nombre completo: ")),
+                "Direccion": str(input("Direccion: ")),
+                "Acudiente": str(input("Nombre acudiente: ")),
+                "Celular": str(input("Numero celular: ")),
+                "Fijo": str(input("Numero fijo: ")), 
+                "Estado": "proceso_de_inscripcion",
+                "Riesgo": ""
+            }
 
-        proceso_de_inscripcion["campers"]["campers_pre_inscritos"].append(nuevo_dato)  # Agregar datos al archivo JSON
+            proceso_de_inscripcion["campers"]["campers_pre_inscritos"].append(nuevo_dato)  # Agregar datos al archivo JSON
 
-        with open('proceso_de_inscripcion.json', 'w') as file:
-            json.dump(proceso_de_inscripcion, file, indent=2)  # Guardar cambios
+            with open('proceso_de_inscripcion.json', 'w') as file:
+                json.dump(proceso_de_inscripcion, file, indent=2)  # Guardar cambios
 
-        print("Pre ingreso exitoso! ")
+            print("Pre ingreso exitoso! ")
 
