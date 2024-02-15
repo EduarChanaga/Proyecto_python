@@ -10,6 +10,26 @@
                 "Fijo": "asd",
                 "Estado": "aprobado",
                 "Riesgo": ""
+            },
+            {
+                "n_identificacion": 1,
+                "Nombre": "1",
+                "Direccion": "1",
+                "Acudiente": "1",
+                "Celular": "1",
+                "Fijo": "1",
+                "Estado": "aprobado",
+                "Riesgo": ""
+            },
+            {
+                "n_identificacion": 12345,
+                "Nombre": "eduar damian",
+                "Direccion": "crr 11",
+                "Acudiente": "alexander",
+                "Celular": "313 3950318",
+                "Fijo": "21313",
+                "Estado": "aprobado",
+                "Riesgo": ""
             }
         ]
     }

@@ -26,10 +26,15 @@ def inscripcion():
     for pre_inscrito in pre_inscritos:
         print("Numero de identificacion:", pre_inscrito["n_identificacion"], "   Nombre: ",pre_inscrito["Nombre"])
     print("")
-    numero_identidad = input("Ingrese la identificacion del camper que desea declarar como inscrito: ")
+    while True:
+        try:
+            numero_identidad = int(input("Ingrese la identificacion del camper que desea declarar como inscrito: "))
+            break  # Si la conversión a entero tiene éxito, salimos del bucle
+        except ValueError:
+            print("Por favor, ingrese un número de identificación válido (entero).")
 
     for pre_inscrito in pre_inscritos:
-        if pre_inscrito['n_identificacion'] == int(numero_identidad):  # Convertir a int
+        if pre_inscrito['n_identificacion'] == (numero_identidad):  # Convertir a int
             # Cambiar el estado de proceso de inscripción a inscritos
             pre_inscrito['Estado'] = 'inscritos'
             # Mover el pre_inscrito al nuevo arreglo campers_inscritos
@@ -63,17 +68,23 @@ def matriculas():
     for grupo in grupos:
         print(grupo)
 
-    camper_a_mover_a_grupo = int(input("Ingrese el ID del camper que desea asignar a un grupo: "))
+    while True:
+        try:
+            camper_a_mover_a_grupo = int(input("Ingrese el ID del camper que desea asignar a un grupo: "))
+            break  # Si la conversión a entero tiene éxito, salimos del bucle
+        except ValueError:
+            print("Por favor, ingrese un ID de camper válido (entero).")
+
     
     for i in range(len(aprobados)):
         if aprobados[i]['n_identificacion'] == camper_a_mover_a_grupo:
             camper = aprobados.pop(i)
             camper['Estado'] = 'Cursando'
-            camper["modulos"]={"Fundamentos de programacion":"",
-                       "programacion web":"",
-                       "programacion formal":"",
-                       "bases de datos":"",
-                       "backend":""    
+            camper["modulos"]={"Fundamentos de programacion":0,
+                       "programacion web":0,
+                       "programacion formal":0,
+                       "bases de datos":0,
+                       "backend":0    
                     }
 
             grupo = input("Ingrese el nombre del grupo al que desea asignar al camper: ")
@@ -114,11 +125,22 @@ def ingreso_de_notas():
         aprobaron_examen_ingreso=json.load(i)
     for camper in inscritos['campers']['campers_inscritos']:  # Iterar sobre la lista de campers inscritos
         print("Numero de identificacion:", camper["n_identificacion"], "   Nombre: ",camper["Nombre"])
-    identificacion = int(input("Ingrese la identificacion del camper: "))
+    while True:
+        try:
+            identificacion = int(input("Ingrese la identificacion del camper: "))
+            break  # Si la conversión a entero tiene éxito, salimos del bucle
+        except ValueError:
+            print("Por favor, ingrese una identificación válida (entero).")
+
     for camper in inscritos['campers']['campers_inscritos']:  # Iterar sobre la lista de campers inscritos
         if camper["n_identificacion"] == identificacion:  # Acceder al diccionario de cada camper
-            nota_teorica = float(input("Ingrese la nota teorica del camper: "))
-            nota_practica = float(input("Ingrese la nota practica del camer: "))
+            while True:
+                try:
+                    nota_teorica = float(input("Ingrese la nota teorica del camper: "))
+                    nota_practica = float(input("Ingrese la nota practica del camper: "))
+                    break  # Si la conversión a flotante tiene éxito, salimos del bucle
+                except ValueError:
+                    print("Por favor, ingrese una nota válida (número).")
             promedio = (nota_teorica + nota_practica) / 2
             if promedio >=60:
                 camper["Estado"]="aprobado"
@@ -150,50 +172,57 @@ def expulsar_camper():
 
     with open('expulsados.json', 'r') as file:
         expulsados = json.load(file)
-
-    # Preguntar si se quiere expulsar un camper
-    expulsar = input("¿Desea expulsar un camper? (si/no): ")
-    clear()
-    if expulsar.lower() == 'si':
-        # Mostrar grupos disponibles
-        print("Grupos disponibles:")
-        for grupo in grupos['grupos']:
-            print(grupo)
-
-        # Elegir un grupo
-        grupo_elegido = input("Elija un grupo: ")
+    while True:
+        # Preguntar si se quiere expulsar un camper
+        expulsar = str(input("¿Desea expulsar un camper? (si/no): "))
         clear()
-        # Mostrar campers en el grupo elegido
-        print("Campers en el grupo:")
-        for camper in grupos['grupos'][grupo_elegido]:
-            print(f"Nombre: {camper['Nombre']}, ID: {camper['n_identificacion']}")
+        if expulsar.lower() == 'si':
+            # Mostrar grupos disponibles
+            print("Grupos disponibles:")
+            for grupo in grupos['grupos']:
+                print(grupo)
 
-        # Elegir un camper para expulsar
-        id_camper_expulsar = int(input("Elija el ID del camper para expulsar: "))
-
-        # Buscar el camper en el grupo
-        for camper in grupos['grupos'][grupo_elegido]:
-            if camper['n_identificacion'] == id_camper_expulsar:
-                # Cambiar el estado del camper a "expulsado"
-                camper['Estado'] = 'Expulsado'
-                # Mover el camper al archivo de expulsados
-                expulsados["campers"]['campers_expulsados'].append(camper)
-                grupos['grupos'][grupo_elegido].remove(camper)
-                clear()
-                print(f"El camper {camper['Nombre']} ha sido expulsado.")
-                input("Presione Enter para continuar...")
-                break
-        else:
+            # Elegir un grupo
+            grupo_elegido = str(input("Elija un grupo: "))
             clear()
-            print("Camper no encontrado.")
-            input("Presione Enter para continuar...")
+            # Mostrar campers en el grupo elegido
+            print("Campers en el grupo:")
+            for camper in grupos['grupos'][grupo_elegido]:
+                print(f"Nombre: {camper['Nombre']}, ID: {camper['n_identificacion']}")
 
-    # Guardar los cambios en los archivos JSON
-    with open('grupos.json', 'w') as file:
-        json.dump(grupos, file, indent=4)
+            # Elegir un camper para expulsar
+            while True:
+                try:
+                    id_camper_expulsar = int(input("Elija el ID del camper para expulsar: "))
+                    break  # Si la conversión a entero tiene éxito, salimos del bucle
+                except ValueError:
+                    print("Por favor, ingrese un ID de camper válido (entero).")
 
-    with open('expulsados.json', 'w') as file:
-        json.dump(expulsados, file, indent=4)
+            # Buscar el camper en el grupo
+            for camper in grupos['grupos'][grupo_elegido]:
+                if camper['n_identificacion'] == id_camper_expulsar:
+                    # Cambiar el estado del camper a "expulsado"
+                    camper['Estado'] = 'Expulsado'
+                    # Mover el camper al archivo de expulsados
+                    expulsados["campers"]['campers_expulsados'].append(camper)
+                    grupos['grupos'][grupo_elegido].remove(camper)
+                    clear()
+                    print(f"El camper {camper['Nombre']} ha sido expulsado.")
+                    input("Presione Enter para continuar...")
+                    break
+            else:
+                clear()
+                print("Camper no encontrado.")
+                input("Presione Enter para continuar...")
+        if expulsar.lower() == 'no':
+            break
+        clear()
+        # Guardar los cambios en los archivos JSON
+        with open('grupos.json', 'w') as file:
+            json.dump(grupos, file, indent=4)
+
+        with open('expulsados.json', 'w') as file:
+            json.dump(expulsados, file, indent=4)
 
 def modificar_notas():
     with open("grupos.json", "r") as file:
@@ -203,7 +232,7 @@ def modificar_notas():
     for grupo in grupos["grupos"]:
         print(grupo)
 
-    grupo_seleccionado = input("Ingrese el nombre del grupo que desea seleccionar: ")
+    grupo_seleccionado = str(input("Ingrese el nombre del grupo que desea seleccionar: "))
 
     if grupo_seleccionado in grupos["grupos"]:
         alumnos = grupos["grupos"][grupo_seleccionado]
@@ -211,21 +240,37 @@ def modificar_notas():
         for alumno in alumnos:
             print(f"ID: {alumno['n_identificacion']} - Nombre: {alumno['Nombre']}")
 
-        id_alumno = int(input("\nIngrese el ID del alumno para modificar la nota: "))
+        while True:
+            try:
+                id_alumno = int(input("\nIngrese el ID del alumno para modificar la nota: "))
+                break  # Si la conversión a entero tiene éxito, salimos del bucle
+            except ValueError:
+                print("Por favor, ingrese un ID de alumno válido (entero).")
         for alumno in alumnos:
             if alumno['n_identificacion'] == id_alumno:
                 print("\nModulos del alumno:")
                 for i, modulo in enumerate(alumno["modulos"], 1):
                     print(f"{i}. {modulo}")
 
-                modulo_seleccionado = int(input("\nIngrese el número del modulo al que desea ingresar la nota: "))
+                while True:
+                    try:
+                        modulo_seleccionado = int(input("\nIngrese el número del módulo al que desea ingresar la nota: "))
+                        break  # Si la conversión a entero tiene éxito, salimos del bucle
+                    except ValueError:
+                        print("Por favor, ingrese un número de módulo válido (entero).")
                 if 1 <= modulo_seleccionado <= len(alumno["modulos"]):
                     modulo = list(alumno["modulos"].keys())[modulo_seleccionado - 1]
                     clear()
                     print(f"--> {modulo} <--")
-                    teorica = float(input(f"Ingrese la nota de la prueba teorica: "))
-                    practica = float(input(f"Ingrese la nota de la prueba practica': "))
-                    quizes = float(input(f"Ingrese la nota de quizes y tareas: "))
+                    while True:
+                        try:
+                            teorica = float(input("Ingrese la nota de la prueba teórica: "))
+                            practica = float(input("Ingrese la nota de la prueba práctica: "))
+                            quizes = float(input("Ingrese la nota de quices y tareas: "))
+                            break  # Si la conversión a flotante tiene éxito para todas las entradas, salimos del bucle
+                        except ValueError:
+                            print("Por favor, ingrese un valor numérico válido para las notas.")
+
                     nota=(teorica*0.3)+(practica*0.6)+(quizes*0.1)
                     if nota <60:
                         alumno["Riesgo"] = "alto"

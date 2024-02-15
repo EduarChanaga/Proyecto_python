@@ -17,7 +17,7 @@ def ingreso_trainer():
         volver = input("-> ")
 
         if volver.lower() == "no":
-            return
+            break
         
         clear()
         #Ingreso de datos del tainer

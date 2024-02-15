@@ -47,6 +47,9 @@ def trainers():
     
 
     while True:
+        print("\033[1;30m" + "-" * 21)
+        print("\033[1;30m" + "|      \033[1;37mTrainers     \033[1;30m|")
+        print("\033[1;30m" + "-" * 21)
         print("¿Qué desea realizar?")
         print("1. Ver grupos según entrenador aignado")
         print("2. Ingresar notas de campers")
