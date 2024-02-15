@@ -2,28 +2,16 @@
   "campus": {
     "grupo": [
       {
-        "nombre_grupo": "p2",
-        "Horario": 2,
-        "trainer": {
-          "ID": 123,
-          "Nombre": "pedrito perez"
-        },
-        "Salon": 3,
-        "Ruta": 2,
-        "Fecha_de_inicio": "23/abril/2020",
-        "Fecha_de_fin": "31/febrero/2021"
-      },
-      {
         "nombre_grupo": "p1",
-        "Horario": 2,
+        "Horario": 1,
         "trainer": {
-          "ID": 1234,
-          "Nombre": "chanaga"
+          "ID": 12345,
+          "Nombre": "pedrito"
         },
-        "Salon": 3,
+        "Salon": 1,
         "Ruta": 2,
-        "Fecha_de_inicio": "23/abril/2020",
-        "Fecha_de_fin": "31/febrero/2021"
+        "Fecha_de_inicio": "09/enero/2023",
+        "Fecha_de_fin": "09/enero/2024"
       }
     ]
   }

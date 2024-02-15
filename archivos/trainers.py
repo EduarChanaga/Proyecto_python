@@ -60,8 +60,13 @@ def trainers():
         if opcion == "1":
             clear()
             obtener_entrenadores(trainers)
-            id_trainer = input("Ingrese el ID del entrenador: ")
-            id_trainer = int(id_trainer)  # Convertir a entero
+            while True:
+                try:
+                    id_trainer = int(input("Ingrese el ID del trainer: "))
+                    break  # Si la conversión a entero tiene éxito, salimos del bucle
+                except ValueError:
+                    print("Por favor, ingrese un ID de trainer válido (entero).")
+              
             grupos = obtener_grupos_por_trainer(id_trainer, info_grupos)
             imprimir_grupos(grupos)
         elif opcion=="2":

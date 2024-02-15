@@ -2,18 +2,25 @@
   "campers": {
     "trainers": [
       {
-        "n_identificacion": 123,
-        "Nombre": "pedrito perez",
-        "Direccion": "crr 34",
-        "Celular": "24123 1545",
-        "Fijo": "1232145"
+        "n_identificacion": 12345,
+        "Nombre": "pedrito",
+        "Direccion": "crr 11 57 an\u00b006",
+        "Celular": "313 3950318",
+        "Fijo": "453434"
       },
       {
-        "n_identificacion": 1234,
-        "Nombre": "chanaga",
-        "Direccion": "crr 34",
-        "Celular": "24123 1545",
-        "Fijo": "1232145"
+        "n_identificacion": 12345678,
+        "Nombre": "Hernan Mendez",
+        "Direccion": "crr 23 an 25",
+        "Celular": "315 31511055",
+        "Fijo": "234356"
+      },
+      {
+        "n_identificacion": 12,
+        "Nombre": "angi alexandra",
+        "Direccion": "crr 56 an 26",
+        "Celular": "316 5650054",
+        "Fijo": "43543"
       }
     ]
   }

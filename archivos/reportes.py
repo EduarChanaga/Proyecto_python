@@ -8,6 +8,9 @@ def clear():
 
 def reportes():
     while True:
+        print("\033[1;30m" + "-" * 21)
+        print("\033[1;30m" + "|      \033[1;37mReportes     \033[1;30m|")
+        print("\033[1;30m" + "-" * 21)
         print("1. Listar los campers que se encuentren en estado de inscrito.")
         print("2. Listar los campers que aprobaron el examen inicial.")
         print("3. Listar los entrenadores que se encuentran trabajando con CampusLands.")

@@ -83,16 +83,19 @@ def cordinador():
 
 
         elif opciones_cordinador=="3":
+            print("\033[1;30m" + "-" * 29)
+            print("\033[1;30m" + "|      \033[1;37mOpciones grupos     \033[1;30m|")
+            print("\033[1;30m" + "-" * 29)
             print("1. Crear grupo") 
             print("2. Ver grupos")      
             print("3. salir")
-            opciones_rutas=int(input("--> ")) 
+            opciones_rutas=str(input("--> ")) 
             clear()
-            if opciones_rutas==1:
+            if opciones_rutas=="1":
                 print(opcionesrutas.crear_grupo())
-            elif opciones_rutas==2:
+            elif opciones_rutas=="2":
                 print(opcionesrutas.ver_grupos())
-            elif opciones_rutas==3:
+            elif opciones_rutas=="3":
                 clear()
             
 

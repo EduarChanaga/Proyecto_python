@@ -1,5 +1,106 @@
 {
   "campers": {
-    "campers_pre_inscritos": []
+    "campers_pre_inscritos": [
+      {
+        "n_identificacion": 574829153,
+        "Nombre": "Ana Lopez",
+        "Direccion": "crr 11",
+        "Acudiente": "Andres",
+        "Celular": "314 3511901",
+        "Fijo": "3123 54334",
+        "Estado": "proceso_de_inscripcion",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 574829154,
+        "Nombre": "Maria Martinez",
+        "Direccion": "crr 11",
+        "Acudiente": "Pedro",
+        "Celular": "315 3520192",
+        "Fijo": "3123 54334",
+        "Estado": "proceso_de_inscripcion",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 574829155,
+        "Nombre": "Juan Garcia",
+        "Direccion": "crr 11",
+        "Acudiente": "Luisa",
+        "Celular": "316 3541234",
+        "Fijo": "3123 54334",
+        "Estado": "proceso_de_inscripcion",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 574829156,
+        "Nombre": "Carlos Ramirez",
+        "Direccion": "crr 11",
+        "Acudiente": "Ana",
+        "Celular": "317 3567890",
+        "Fijo": "3123 54334",
+        "Estado": "proceso_de_inscripcion",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 574829157,
+        "Nombre": "Luisa Gutierrez",
+        "Direccion": "crr 11",
+        "Acudiente": "Carlos",
+        "Celular": "318 3589023",
+        "Fijo": "3123 54334",
+        "Estado": "proceso_de_inscripcion",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 574829158,
+        "Nombre": "Pedro Rodriguez",
+        "Direccion": "crr 11",
+        "Acudiente": "Maria",
+        "Celular": "319 3510987",
+        "Fijo": "3123 54334",
+        "Estado": "proceso_de_inscripcion",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 574829159,
+        "Nombre": "Luis Hernandez",
+        "Direccion": "crr 11",
+        "Acudiente": "Juan",
+        "Celular": "320 3546573",
+        "Fijo": "3123 54334",
+        "Estado": "proceso_de_inscripcion",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 574829160,
+        "Nombre": "Andres Perez",
+        "Direccion": "crr 11",
+        "Acudiente": "Ana",
+        "Celular": "321 3589321",
+        "Fijo": "3123 54334",
+        "Estado": "proceso_de_inscripcion",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 574829161,
+        "Nombre": "Ana Ramirez",
+        "Direccion": "crr 11",
+        "Acudiente": "Andres",
+        "Celular": "322 3542310",
+        "Fijo": "3123 54334",
+        "Estado": "proceso_de_inscripcion",
+        "Riesgo": ""
+      },
+      {
+        "n_identificacion": 574829162,
+        "Nombre": "Maria Lopez",
+        "Direccion": "crr 11",
+        "Acudiente": "Carlos",
+        "Celular": "323 3518976",
+        "Fijo": "3123 54334",
+        "Estado": "proceso_de_inscripcion",
+        "Riesgo": ""
+      }
+    ]
   }
 }

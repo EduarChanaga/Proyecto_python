@@ -21,7 +21,12 @@ def ingreso_trainer():
         
         clear()
         #Ingreso de datos del tainer
-        trainer_n_ident=int(input("Numero de identificacion: "))
+        while True:
+            try:
+                trainer_n_ident = int(input("Numero de identificacion: "))
+                break  # Si la conversión a entero tiene éxito, salimos del bucle
+            except ValueError:
+                print("Por favor, ingrese un número de identificación válido (entero).")
         trainer_nombre=str(input("Nombre completo: "))
         trainer_direccion=str(input("Direccion: "))
         trainer_celular=str(input("Numero celular: "))
