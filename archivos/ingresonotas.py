@@ -33,11 +33,21 @@ def ingreso_notas():
         clear()
         for alumno in alumnos:
             if alumno['n_identificacion'] == id_alumno:
-                print("\nModulos del alumno:")
-                for i, modulo in enumerate(alumno["modulos"], 1):
-                    print(f"{i}. {modulo}")
+          
+                while True:
+                            print("\nModulos del alumno:")
+                            for i, modulo in enumerate(alumno["modulos"], 1):
+                                print(f"{i}. {modulo}")
+                            try:
+                                modulo_seleccionado = int(input("\nIngrese el número del modulo al que desea ingresar la nota: "))
+                                break
+                                # Si la conversión a entero tiene éxito, salimos del bucle
+                            except ValueError:
+                                clear()
+                                print("Por favor, ingrese un número de modulo válido (entero).")
 
-                modulo_seleccionado = int(input("\nIngrese el número del modulo al que desea ingresar la nota: "))
+
+
                 if 1 <= modulo_seleccionado <= len(alumno["modulos"]):
                     modulo = list(alumno["modulos"].keys())[modulo_seleccionado - 1]
                     clear()
