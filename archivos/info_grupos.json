@@ -17,8 +17,8 @@
         "nombre_grupo": "p1",
         "Horario": 2,
         "trainer": {
-          "ID": 123,
-          "Nombre": "pedrito perez"
+          "ID": 1234,
+          "Nombre": "chanaga"
         },
         "Salon": 3,
         "Ruta": 2,

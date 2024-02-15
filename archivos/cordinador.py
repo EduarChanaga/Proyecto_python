@@ -18,8 +18,7 @@ def cordinador():
         print("1. Ver opciones sobre los campers")
         print("2. Ver opciones sobre los trainers")
         print("3. Grupos (creacion, vista...)")
-        print("4. Reportes")
-        print("5. salir")
+        print("4. salir")
         opciones_cordinador=int(input("--> "))
         clear()
 
@@ -91,9 +90,6 @@ def cordinador():
                 clear()
 
 
-
         elif opciones_cordinador==4:
-            print(reportes.reportes())
-        elif opciones_cordinador==5:
             clear()
             return

@@ -7,6 +7,13 @@
         "Direccion": "crr 34",
         "Celular": "24123 1545",
         "Fijo": "1232145"
+      },
+      {
+        "n_identificacion": 1234,
+        "Nombre": "chanaga",
+        "Direccion": "crr 34",
+        "Celular": "24123 1545",
+        "Fijo": "1232145"
       }
     ]
   }

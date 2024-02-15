@@ -106,4 +106,61 @@ def rutas_campers_trainer():
     clear()
 
 def perdieron_aprobaron_modulo():
-    print()
+    import json
+
+    # Cargar datos desde los archivos JSON
+    with open('info_grupos.json', 'r') as file:
+        info_grupos = json.load(file)
+
+    with open('grupos.json', 'r') as file:
+        grupos = json.load(file)
+
+    # Función para calcular el estado de los módulos
+    def calcular_estado(modulos):
+        for modulo, nota in modulos.items():
+            if nota == "":
+                modulos[modulo] = "Perdido"
+            elif float(nota) >= 60.0:
+                modulos[modulo] = "Aprobado"
+            else:
+                modulos[modulo] = "Perdido"
+
+    # Diccionario para contar los campers que perdieron y aprobaron cada módulo
+    contadores_modulos = {}
+
+    # Iterar sobre cada grupo
+    for grupo_info in info_grupos['campus']['grupo']:
+        grupo_nombre = grupo_info['nombre_grupo']
+        trainer_nombre = grupo_info['trainer']['Nombre']
+
+        # Obtener los campers del grupo
+        campers = grupos['grupos'][grupo_nombre]
+
+        # Iterar sobre cada camper del grupo
+        for camper in campers:
+            calcular_estado(camper['modulos'])  # Calcular el estado de los módulos
+            for modulo, estado in camper['modulos'].items():
+                # Incrementar el contador para el módulo correspondiente
+                contador_key = (grupo_nombre, trainer_nombre, modulo, estado)
+                contadores_modulos[contador_key] = contadores_modulos.get(contador_key, 0) + 1
+    
+     # Agrupar los resultados por grupo y por entrenador
+    resultados_por_grupo_trainer = {}
+    for (grupo, entrenador, modulo, estado), cantidad in contadores_modulos.items():
+        if grupo not in resultados_por_grupo_trainer:
+            resultados_por_grupo_trainer[grupo] = {}
+        if entrenador not in resultados_por_grupo_trainer[grupo]:
+            resultados_por_grupo_trainer[grupo][entrenador] = []
+        resultados_por_grupo_trainer[grupo][entrenador].append((grupo, entrenador, modulo, estado, cantidad))
+
+    # Mostrar los resultados por grupo y por entrenador
+    for grupo, entrenadores in resultados_por_grupo_trainer.items():
+        print(f"Grupo: {grupo}")
+        for entrenador, resultados in entrenadores.items():
+            print(f"Entrenador: {entrenador}")
+            for (grupo, entrenador, modulo, estado, cantidad) in resultados:
+                print(f"Módulo: {modulo}, Estado: {estado}, Cantidad: {cantidad}")
+            print()
+    print("")    
+    cl=str(input("Enter para continuar"))
+    clear()
