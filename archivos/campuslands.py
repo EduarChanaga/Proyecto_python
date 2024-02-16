@@ -35,8 +35,5 @@ while True:
         print(reportes.reportes())
     if tipo_de_usuario=="5":
         break
-        
-
-#hola campers
 
 
